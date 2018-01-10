@@ -3,6 +3,7 @@ import MeterCircle from './Meter/MeterCircle'
 import MeterCircleSemi from './Meter/MeterCircleSemi'
 import MeterCircleDisk from './Meter/MeterCircleDisk'
 import MeterBlock from './Meter/MeterBlock'
+import MeterLine from './Meter/MeterLine'
 import { randomInteger } from '../helpers/helpers'
 import './Meters.css'
 
@@ -100,59 +101,49 @@ export default class Meters extends Component {
 
         <div className="meters-row">
           <div className="meters-meterwrap">
-            <MeterCircleDisk lineWidth={6} value={rand1} rounded={true} />
+            <MeterCircleDisk lineWidth={6} value={rand1} />
           </div>
           <div className="meters-meterwrap">
-            <MeterCircleDisk value={rand2} rounded={false} showBorder={false} />
+            <MeterCircleDisk value={rand2} showBorder={false} />
           </div>
           <div className="meters-meterwrap">
-            <MeterCircleDisk
-              lineWidth={10}
-              value={rand3}
-              rounded={true}
-              lineBackground="#2E112D"
-              lineForeground="#F0433A"
-            />
+            <MeterCircleDisk lineWidth={10} value={rand3} lineBackground="#2E112D" lineForeground="#F0433A" />
           </div>
           <div className="meters-meterwrap">
-            <MeterCircleDisk lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} />
+            <MeterCircleDisk lineWidth={20} value={rand4} textStyle={styles.textStyle} />
           </div>
         </div>
 
         <div className="meters-row">
           <div className="meters-meterwrap">
-            <MeterBlock lineWidth={6} value={rand1} rounded={true} />
+            <MeterBlock value={rand1} />
           </div>
           <div className="meters-meterwrap">
-            <MeterBlock value={rand2} rounded={false} showBorder={false} />
+            <MeterBlock value={rand2} />
           </div>
           <div className="meters-meterwrap">
             <MeterBlock
-              lineWidth={10}
               value={rand3}
-              rounded={true}
               lineBackground="#2E112D"
               lineForeground="#F0433A"
               textStyle={styles.textStyleBright}
             />
           </div>
           <div className="meters-meterwrap">
-            <MeterBlock lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} />
+            <MeterBlock value={rand4} textStyle={styles.textStyle} />
           </div>
         </div>
 
         <div className="meters-row">
           <div className="meters-meterwrap">
-            <MeterBlock lineWidth={6} value={rand1} rounded={true} horizontal={false} />
+            <MeterBlock value={rand1} horizontal={false} />
           </div>
           <div className="meters-meterwrap">
-            <MeterBlock value={rand2} rounded={false} showBorder={false} horizontal={false} />
+            <MeterBlock value={rand2} horizontal={false} />
           </div>
           <div className="meters-meterwrap">
             <MeterBlock
-              lineWidth={10}
               value={rand3}
-              rounded={true}
               lineBackground="#2E112D"
               lineForeground="#F0433A"
               textStyle={styles.textStyleBright}
@@ -160,7 +151,29 @@ export default class Meters extends Component {
             />
           </div>
           <div className="meters-meterwrap">
-            <MeterBlock lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} />
+            <MeterBlock value={rand4} rounded={false} textStyle={styles.textStyle} horizontal={false} />
+          </div>
+        </div>
+
+        <div className="meters-row">
+          <div className="meters-meterwrap">
+            <MeterLine value={rand1} />
+          </div>
+          <div className="meters-meterwrap">
+            <MeterLine value={rand2} lineWidth={10} rounded={true} position="top" />
+          </div>
+          <div className="meters-meterwrap">
+            <MeterLine
+              lineWidth={50}
+              value={rand3}
+              rounded={true}
+              lineBackground="#2E112D"
+              lineForeground="#F0433A"
+              textStyle={styles.textStyleBright}
+            />
+          </div>
+          <div className="meters-meterwrap">
+            <MeterLine lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} />
           </div>
         </div>
       </div>
