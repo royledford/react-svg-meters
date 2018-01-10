@@ -40,8 +40,9 @@ export default class Meters extends Component {
 
     const styles = {
       textStyle: {
-        fontFamily: 'fantasy',
-        fill: '#2E112D',
+        fontFamily: 'cursive',
+        fill: '#000',
+        fontSize: 24,
       },
     }
 
@@ -95,10 +96,10 @@ export default class Meters extends Component {
 
         <div className="meters-row">
           <div className="meters-meterwrap">
-            <MeterCircleDisk lineWidth={20} value={rand1} rounded={true} />
+            <MeterCircleDisk lineWidth={6} value={rand1} rounded={true} />
           </div>
           <div className="meters-meterwrap">
-            <MeterCircleDisk lineWidth={70} value={rand2} rounded={false} />
+            <MeterCircleDisk value={rand2} rounded={false} showBorder={false} />
           </div>
           <div className="meters-meterwrap">
             <MeterCircleDisk
