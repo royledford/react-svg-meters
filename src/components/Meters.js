@@ -59,22 +59,21 @@ export default class Meters extends Component {
 
         <div className="meters-row">
           <div className="meters-meterwrap">
-            <MeterCircle lineWidth={20} value={rand1} rounded={true} />
+            {/* <MeterCircle lineWidth={20} value={rand1} rounded={true} /> */}
+            <MeterCircle lineWidth={20} value={25} rounded={true} startPosition={0} />
           </div>
+          <div className="meters-meterwrap">{/* <MeterCircle lineWidth={70} value={rand2} rounded={false} /> */}</div>
           <div className="meters-meterwrap">
-            <MeterCircle lineWidth={70} value={rand2} rounded={false} />
-          </div>
-          <div className="meters-meterwrap">
-            <MeterCircle
+            {/* <MeterCircle
               lineWidth={10}
               value={rand3}
               rounded={true}
               lineBackground="#2E112D"
               lineForeground="#F0433A"
-            />
+            /> */}
           </div>
           <div className="meters-meterwrap">
-            <MeterCircle lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} />
+            {/* <MeterCircle lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} /> */}
           </div>
         </div>
 

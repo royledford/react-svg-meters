@@ -8,6 +8,8 @@ export default class MeterCircle extends Component {
     lineWidth: PropTypes.number,
     lineBackground: PropTypes.string,
     lineForeground: PropTypes.string,
+    progressStart: PropTypes.number,
+    meterLength: PropTypes.number,
     rounded: PropTypes.bool,
     textStyle: PropTypes.object,
   }
@@ -16,12 +18,24 @@ export default class MeterCircle extends Component {
     lineWidth: 16,
     lineBackground: '#820333',
     lineForeground: '#C9283E',
+    progressStart: 0, // in degrees
+    meterLength: 180, // in degrees
     rounded: false,
     textStyle: {},
   }
 
   render() {
-    const { size, lineWidth, value, lineBackground, lineForeground, rounded, textStyle } = this.props
+    const {
+      size,
+      lineWidth,
+      value,
+      lineBackground,
+      lineForeground,
+      rounded,
+      textStyle,
+      progressStart,
+      meterLength,
+    } = this.props
 
     const baseTextStyle = {
       fontSize: (size - lineWidth * 2) / 2.5,
@@ -35,9 +49,24 @@ export default class MeterCircle extends Component {
     const viewBox = `0 0 ${size} ${size}`
 
     // get the circle circumference
-    const dashArray = radius * Math.PI * 2
+    const circumference = radius * Math.PI * 2
+    const meterPercentage = meterLength / 360
+    const arcLength = meterPercentage * circumference
     // Length of the value prop for the progress
-    const dashOffset = dashArray - dashArray * value / 100
+    const dashOffset = arcLength - arcLength * value / 100
+    // const dashOffset = arcLength / value
+
+    const progressPercentage = value * meterPercentage / 100
+    const progressLength = circumference * progressPercentage
+
+    console.log('circum: ', circumference)
+    console.log('progress len:', progressLength)
+
+    // Make sure a valid value is passed (use 0 if not)
+    let _progressStart = progressStart - 90
+    if (progressStart < 0 || progressStart > 360) {
+      _progressStart = -90
+    }
 
     let lineEnd = rounded ? 'round' : 'butt'
     let textStyleOveride = { ...baseTextStyle, ...textStyle }
@@ -61,12 +90,12 @@ export default class MeterCircle extends Component {
           r={radius}
           strokeWidth={`${lineWidth}px`}
           // Start progress marker at 12 O'Clock
-          transform={`rotate(-90 ${size / 2} ${size / 2})`}
+          transform={`rotate(${_progressStart} ${size / 2} ${size / 2})`}
           style={{
             stroke: lineForeground,
             strokeLinecap: lineEnd,
-            strokeDasharray: dashArray,
-            strokeDashoffset: dashOffset,
+            strokeDasharray: arcLength,
+            strokeDashoffset: arcLength,
             transition: 'stroke-dashoffset 200ms linear',
           }}
         />
