@@ -8,7 +8,6 @@ export default class MeterCircleDisk extends Component {
     lineWidth: PropTypes.number,
     lineBackground: PropTypes.string,
     lineForeground: PropTypes.string,
-    rounded: PropTypes.bool,
     textStyle: PropTypes.object,
     showBorder: PropTypes.bool,
   }
@@ -16,14 +15,14 @@ export default class MeterCircleDisk extends Component {
     size: 200,
     lineWidth: 16,
     lineBackground: '#820333',
-    lineForeground: '#C9283E',
+    lineForeground: '#820333',
     rounded: false,
     textStyle: {},
     showBorder: true,
   }
 
   render() {
-    const { size, value, lineBackground, lineForeground, rounded, textStyle } = this.props
+    const { size, value, lineBackground, lineForeground, textStyle } = this.props
 
     // handle case with no border
     const lineWidth = this.props.showBorder ? this.props.lineWidth : 0
@@ -59,13 +58,6 @@ export default class MeterCircleDisk extends Component {
         .toFixed(16)
         .substring(2)
 
-    // get the circle circumference
-    // const dashArray = radius * Math.PI * 2
-    const dashArray = radius * Math.PI
-    // Length of the value prop for the progress
-    const dashOffset = dashArray - dashArray * value / 100
-
-    let lineEnd = rounded ? 'round' : 'butt'
     let textStyleOveride = { ...baseTextStyle, ...textStyle }
 
     return (
@@ -93,7 +85,7 @@ export default class MeterCircleDisk extends Component {
 
         {/* foreground */}
         <circle
-          style={{ fill: lineBackground }}
+          style={{ fill: lineForeground }}
           cx={size / 2}
           cy={size / 2}
           r={innerRadius}
