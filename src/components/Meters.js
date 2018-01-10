@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import MeterCircle from './Meter/MeterCircle'
 import MeterCircleSemi from './Meter/MeterCircleSemi'
 import MeterCircleDisk from './Meter/MeterCircleDisk'
+import MeterBlock from './Meter/MeterBlock'
 import { randomInteger } from '../helpers/helpers'
 import './Meters.css'
 
@@ -43,6 +44,9 @@ export default class Meters extends Component {
         fontFamily: 'cursive',
         fill: '#000',
         fontSize: 24,
+      },
+      textStyleBright: {
+        fill: '#C9283E',
       },
     }
 
@@ -112,6 +116,51 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap">
             <MeterCircleDisk lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} />
+          </div>
+        </div>
+
+        <div className="meters-row">
+          <div className="meters-meterwrap">
+            <MeterBlock lineWidth={6} value={rand1} rounded={true} />
+          </div>
+          <div className="meters-meterwrap">
+            <MeterBlock value={rand2} rounded={false} showBorder={false} />
+          </div>
+          <div className="meters-meterwrap">
+            <MeterBlock
+              lineWidth={10}
+              value={rand3}
+              rounded={true}
+              lineBackground="#2E112D"
+              lineForeground="#F0433A"
+              textStyle={styles.textStyleBright}
+            />
+          </div>
+          <div className="meters-meterwrap">
+            <MeterBlock lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} />
+          </div>
+        </div>
+
+        <div className="meters-row">
+          <div className="meters-meterwrap">
+            <MeterBlock lineWidth={6} value={rand1} rounded={true} horizontal={false} />
+          </div>
+          <div className="meters-meterwrap">
+            <MeterBlock value={rand2} rounded={false} showBorder={false} horizontal={false} />
+          </div>
+          <div className="meters-meterwrap">
+            <MeterBlock
+              lineWidth={10}
+              value={rand3}
+              rounded={true}
+              lineBackground="#2E112D"
+              lineForeground="#F0433A"
+              textStyle={styles.textStyleBright}
+              horizontal={false}
+            />
+          </div>
+          <div className="meters-meterwrap">
+            <MeterBlock lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} />
           </div>
         </div>
       </div>
