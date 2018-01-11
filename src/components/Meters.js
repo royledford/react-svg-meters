@@ -62,7 +62,14 @@ export default class Meters extends Component {
             <MeterCircle lineWidth={20} value={rand1} rounded={true} />
           </div>
           <div className="meters-meterwrap">
-            <MeterCircle lineWidth={70} value={rand2} rounded={false} />
+            <MeterCircle
+              lineWidth={50}
+              value={rand2}
+              rounded={true}
+              progressStart={180}
+              meterLength={240}
+              rounded={false}
+            />
           </div>
           <div className="meters-meterwrap">
             <MeterCircle
@@ -71,6 +78,8 @@ export default class Meters extends Component {
               rounded={true}
               lineBackground="#2E112D"
               lineForeground="#F0433A"
+              progressStart={230}
+              meterLength={260}
             />
           </div>
           <div className="meters-meterwrap">
@@ -129,6 +138,7 @@ export default class Meters extends Component {
               lineBackground="#2E112D"
               lineForeground="#F0433A"
               textStyle={styles.textStyleBright}
+
             />
           </div>
           <div className="meters-meterwrap">
@@ -153,6 +163,7 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap">
             <MeterBlock value={rand4} textStyle={styles.textStyle} />
+
           </div>
         </div>
 
