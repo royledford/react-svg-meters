@@ -42,12 +42,16 @@ export default class Meters extends Component {
 
     const styles = {
       textStyle: {
-        fontFamily: 'cursive',
-        fill: '#000',
+        fontFamily: 'sans-serif',
+        fill: '#1FC939',
         fontSize: 24,
       },
       textStyleBright: {
         fill: '#C9283E',
+      },
+      color: {
+        foreground: '#C9283E',
+        background: '#820333',
       },
     }
 
@@ -57,9 +61,19 @@ export default class Meters extends Component {
           <h1 className="meters-title">React SVG Meters</h1>
         </div>
 
+        {/* -------------------------------- */}
+
+        {/*            CIRCLES               */}
+
+        {/* -------------------------------- */}
+
         <div className="meters-row">
           <div className="meters-meterwrap">
-            <MeterCircle lineWidth={20} value={rand1} rounded={true} />
+            <MeterCircle
+              value={rand1}
+              lineForeground={styles.color.foreground}
+              lineBackground={styles.color.background}
+            />
           </div>
           <div className="meters-meterwrap">
             <MeterCircle
@@ -69,11 +83,13 @@ export default class Meters extends Component {
               progressStart={180}
               meterLength={240}
               rounded={false}
+              lineForeground={styles.color.foreground}
+              lineBackground={styles.color.background}
             />
           </div>
           <div className="meters-meterwrap">
             <MeterCircle
-              lineWidth={10}
+              lineWidth={20}
               value={rand3}
               rounded={true}
               lineBackground="#2E112D"
@@ -83,20 +99,32 @@ export default class Meters extends Component {
             />
           </div>
           <div className="meters-meterwrap">
-            <MeterCircle lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} />
+            <MeterCircle
+              lineWidth={30}
+              value={rand4}
+              textStyle={styles.textStyle}
+              progressStart={180}
+              lineForeground={styles.color.foreground}
+              lineBackground={styles.color.background}
+            />
           </div>
         </div>
 
+        {/* -------------------------------- */}
+
+        {/*         HALF CIRCLES             */}
+
+        {/* -------------------------------- */}
         <div className="meters-row">
           <div className="meters-meterwrap">
-            <MeterCircleSemi lineWidth={20} value={rand1} rounded={true} />
+            <MeterCircleSemi value={rand1} />
           </div>
           <div className="meters-meterwrap">
-            <MeterCircleSemi lineWidth={70} value={rand2} rounded={false} />
+            <MeterCircleSemi lineWidth={70} value={rand2} />
           </div>
           <div className="meters-meterwrap">
             <MeterCircleSemi
-              lineWidth={10}
+              lineWidth={20}
               value={rand3}
               rounded={true}
               lineBackground="#2E112D"
@@ -104,13 +132,18 @@ export default class Meters extends Component {
             />
           </div>
           <div className="meters-meterwrap">
-            <MeterCircleSemi lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} />
+            <MeterCircleSemi lineWidth={30} value={rand4} textStyle={styles.textStyle} />
           </div>
         </div>
 
+        {/* -------------------------------- */}
+
+        {/*             DISKS                */}
+
+        {/* -------------------------------- */}
         <div className="meters-row">
           <div className="meters-meterwrap">
-            <MeterCircleDisk lineWidth={6} value={rand1} />
+            <MeterCircleDisk value={rand1} />
           </div>
           <div className="meters-meterwrap">
             <MeterCircleDisk value={rand2} showBorder={false} />
@@ -123,16 +156,21 @@ export default class Meters extends Component {
           </div>
         </div>
 
+        {/* -------------------------------- */}
+
+        {/*             LINES                */}
+
+        {/* -------------------------------- */}
         <div className="meters-row">
           <div className="meters-meterwrap">
             <MeterLine value={rand1} />
           </div>
           <div className="meters-meterwrap">
-            <MeterLine value={rand2} lineWidth={10} rounded={true} position="top" />
+            <MeterLine value={rand2} lineWidth={50} rounded={true} position="top" />
           </div>
           <div className="meters-meterwrap">
             <MeterLine
-              lineWidth={50}
+              lineWidth={10}
               value={rand3}
               rounded={true}
               lineBackground="#2E112D"
@@ -145,6 +183,11 @@ export default class Meters extends Component {
           </div>
         </div>
 
+        {/* -------------------------------- */}
+
+        {/*             BLOCKS               */}
+
+        {/* -------------------------------- */}
         <div className="meters-row">
           <div className="meters-meterwrap">
             <MeterBlock value={rand1} />
@@ -165,6 +208,44 @@ export default class Meters extends Component {
             <MeterBlock value={rand4} textStyle={styles.textStyle} horizontal={false} />
           </div>
         </div>
+
+        {/* -------------------------------- */}
+
+        {/*            DEFAULT COLOR         */}
+
+        {/* -------------------------------- */}
+
+        <div className="meters-row">
+          <div className="meters-meterwrap meters-nobg">
+            <MeterCircle value={rand1} />
+          </div>
+          <div className="meters-meterwrap meters-nobg">
+            <MeterCircle
+              lineWidth={50}
+              value={rand2}
+              rounded={true}
+              progressStart={180}
+              meterLength={240}
+              rounded={false}
+            />
+          </div>
+          <div className="meters-meterwrap meters-nobg">
+            <MeterCircle
+              lineWidth={20}
+              value={rand3}
+              rounded={true}
+              lineBackground="#2E112D"
+              lineForeground="#F0433A"
+              progressStart={230}
+              meterLength={260}
+            />
+          </div>
+          <div className="meters-meterwrap meters-nobg">
+            <MeterCircle lineWidth={30} value={rand4} textStyle={styles.textStyle} progressStart={180} />
+          </div>
+        </div>
+
+        {/* -------------------------------- */}
       </div>
     )
   }

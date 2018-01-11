@@ -12,8 +12,8 @@ export default class MeterBlock extends Component {
   }
   static defaultProps = {
     size: 200,
-    lineBackground: '#820333',
-    lineForeground: '#C9283E',
+    lineBackground: '#7FB2F0',
+    lineForeground: '#35478C',
     textStyle: {},
     horizontal: true,
   }
@@ -24,7 +24,7 @@ export default class MeterBlock extends Component {
     const baseTextStyle = {
       fontSize: size / 2.5,
       fontWeight: 'bold',
-      fill: '#2E112D',
+      fill: this.props.lineForeground,
     }
 
     const middle = size / 2

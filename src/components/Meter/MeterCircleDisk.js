@@ -13,9 +13,9 @@ export default class MeterCircleDisk extends Component {
   }
   static defaultProps = {
     size: 200,
-    lineWidth: 16,
-    lineBackground: '#820333',
-    lineForeground: '#820333',
+    lineWidth: 6,
+    lineBackground: '#7FB2F0',
+    lineForeground: '#7FB2F0',
     rounded: false,
     textStyle: {},
     showBorder: true,
@@ -30,7 +30,7 @@ export default class MeterCircleDisk extends Component {
     const baseTextStyle = {
       fontSize: (size - lineWidth * 2) / 2.8,
       fontWeight: 'bold',
-      fill: '#C9283E',
+      fill: '#35478C',
     }
 
     // The stroke is based on the center of the lineWidth,

@@ -16,8 +16,8 @@ export default class MeterCircle extends Component {
   static defaultProps = {
     size: 200,
     lineWidth: 16,
-    lineBackground: '#820333',
-    lineForeground: '#C9283E',
+    lineBackground: '#7FB2F0',
+    lineForeground: '#35478C',
     progressStart: 0, // in degrees
     meterLength: 360, // in degrees
     rounded: false,
@@ -40,7 +40,7 @@ export default class MeterCircle extends Component {
     const baseTextStyle = {
       fontSize: (size - lineWidth * 2) / 2.5,
       fontWeight: 'bold',
-      fill: '#C9283E',
+      fill: this.props.lineForeground,
     }
 
     // The stroke is based on the center of the lineWidth,

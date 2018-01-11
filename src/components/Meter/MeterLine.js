@@ -15,8 +15,8 @@ export default class MeterLine extends Component {
   static defaultProps = {
     size: 200,
     lineWidth: 36,
-    lineBackground: '#820333',
-    lineForeground: '#C9283E',
+    lineBackground: '#7FB2F0',
+    lineForeground: '#35478C',
     rounded: false,
     textStyle: {},
     position: 'bottom',
@@ -28,7 +28,7 @@ export default class MeterLine extends Component {
     const baseTextStyle = {
       fontSize: size / 2.5,
       fontWeight: 'bold',
-      fill: '#C9283E',
+      fill: this.props.lineForeground,
     }
 
     let verticalCoordinate = size / 4 * 3

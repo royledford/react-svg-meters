@@ -14,8 +14,8 @@ export default class MeterCircleSemi extends Component {
   static defaultProps = {
     size: 200,
     lineWidth: 16,
-    lineBackground: '#820333',
-    lineForeground: '#C9283E',
+    lineBackground: '#7FB2F0',
+    lineForeground: '#35478C',
     rounded: false,
     textStyle: {},
   }
@@ -26,7 +26,7 @@ export default class MeterCircleSemi extends Component {
     const baseTextStyle = {
       fontSize: (size - lineWidth * 2) / 2.8,
       fontWeight: 'bold',
-      fill: '#C9283E',
+      fill: this.props.lineForeground,
     }
 
     // The stroke is based on the center of the lineWidth,
