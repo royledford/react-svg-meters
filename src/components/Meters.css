@@ -34,3 +34,7 @@
 .meters-nobg {
   background-color: white;
 }
+
+.meters-small {
+  width: 160px;
+}

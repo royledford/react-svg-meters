@@ -7,7 +7,8 @@ export default class MeterCircleDisk extends Component {
     size: PropTypes.number,
     lineWidth: PropTypes.number,
     lineBackground: PropTypes.string,
-    lineForeground: PropTypes.string,
+    borderColor: PropTypes.string,
+    textColor: PropTypes.string,
     textStyle: PropTypes.object,
     showBorder: PropTypes.bool,
   }
@@ -15,14 +16,15 @@ export default class MeterCircleDisk extends Component {
     size: 200,
     lineWidth: 6,
     lineBackground: '#7FB2F0',
-    lineForeground: '#7FB2F0',
+    borderColor: '#35478C',
+    textColor: '#35478C',
     rounded: false,
     textStyle: {},
     showBorder: true,
   }
 
   render() {
-    const { size, value, lineBackground, lineForeground, textStyle } = this.props
+    const { size, value, lineBackground, lineForeground, borderColor, textStyle } = this.props
 
     // handle case with no border
     const lineWidth = this.props.showBorder ? this.props.lineWidth : 0
@@ -30,7 +32,7 @@ export default class MeterCircleDisk extends Component {
     const baseTextStyle = {
       fontSize: (size - lineWidth * 2) / 2.8,
       fontWeight: 'bold',
-      fill: '#35478C',
+      fill: this.props.textColor,
     }
 
     // The stroke is based on the center of the lineWidth,
@@ -75,17 +77,11 @@ export default class MeterCircleDisk extends Component {
         </defs>
 
         {/* border circle */}
-        <circle
-          style={{ stroke: lineBackground }}
-          cx={size / 2}
-          cy={size / 2}
-          r={radius}
-          strokeWidth={`${lineWidth}px`}
-        />
+        <circle style={{ stroke: borderColor }} cx={size / 2} cy={size / 2} r={radius} strokeWidth={`${lineWidth}px`} />
 
         {/* foreground */}
         <circle
-          style={{ fill: lineForeground }}
+          style={{ fill: lineBackground }}
           cx={size / 2}
           cy={size / 2}
           r={innerRadius}

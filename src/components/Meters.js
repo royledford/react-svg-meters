@@ -46,12 +46,10 @@ export default class Meters extends Component {
         fill: '#1FC939',
         fontSize: 24,
       },
-      textStyleBright: {
-        fill: '#C9283E',
-      },
       color: {
         foreground: '#C9283E',
         background: '#820333',
+        bright: '#F0433A',
       },
     }
 
@@ -117,10 +115,19 @@ export default class Meters extends Component {
         {/* -------------------------------- */}
         <div className="meters-row">
           <div className="meters-meterwrap">
-            <MeterCircleSemi value={rand1} />
+            <MeterCircleSemi
+              value={rand1}
+              lineForeground={styles.color.foreground}
+              lineBackground={styles.color.background}
+            />
           </div>
           <div className="meters-meterwrap">
-            <MeterCircleSemi lineWidth={70} value={rand2} />
+            <MeterCircleSemi
+              lineWidth={70}
+              value={rand2}
+              lineForeground={styles.color.foreground}
+              lineBackground={styles.color.background}
+            />
           </div>
           <div className="meters-meterwrap">
             <MeterCircleSemi
@@ -132,7 +139,13 @@ export default class Meters extends Component {
             />
           </div>
           <div className="meters-meterwrap">
-            <MeterCircleSemi lineWidth={30} value={rand4} textStyle={styles.textStyle} />
+            <MeterCircleSemi
+              lineWidth={30}
+              value={rand4}
+              textStyle={styles.textStyle}
+              lineForeground={styles.color.foreground}
+              lineBackground={styles.color.background}
+            />
           </div>
         </div>
 
@@ -143,16 +156,39 @@ export default class Meters extends Component {
         {/* -------------------------------- */}
         <div className="meters-row">
           <div className="meters-meterwrap">
-            <MeterCircleDisk value={rand1} />
+            <MeterCircleDisk
+              value={rand1}
+              textColor={styles.color.foreground}
+              borderColor={styles.color.background}
+              lineBackground={styles.color.background}
+            />
           </div>
           <div className="meters-meterwrap">
-            <MeterCircleDisk value={rand2} showBorder={false} />
+            <MeterCircleDisk
+              value={rand2}
+              showBorder={false}
+              textColor={styles.color.foreground}
+              lineBackground={styles.color.background}
+            />
           </div>
           <div className="meters-meterwrap">
-            <MeterCircleDisk lineWidth={10} value={rand3} lineBackground="#2E112D" lineForeground="#F0433A" />
+            <MeterCircleDisk
+              lineWidth={10}
+              value={rand3}
+              borderColor={styles.color.background}
+              lineBackground="#F0433A"
+              textColor="#2E112D"
+            />
           </div>
           <div className="meters-meterwrap">
-            <MeterCircleDisk lineWidth={20} value={rand4} textStyle={styles.textStyle} />
+            <MeterCircleDisk
+              lineWidth={20}
+              value={rand4}
+              textStyle={styles.textStyle}
+              textColor={styles.color.foreground}
+              borderColor={styles.color.background}
+              lineBackground={styles.color.background}
+            />
           </div>
         </div>
 
@@ -163,10 +199,21 @@ export default class Meters extends Component {
         {/* -------------------------------- */}
         <div className="meters-row">
           <div className="meters-meterwrap">
-            <MeterLine value={rand1} />
+            <MeterLine
+              value={rand1}
+              lineForeground={styles.color.foreground}
+              lineBackground={styles.color.background}
+            />
           </div>
           <div className="meters-meterwrap">
-            <MeterLine value={rand2} lineWidth={50} rounded={true} position="top" />
+            <MeterLine
+              value={rand2}
+              lineWidth={50}
+              rounded={true}
+              position="top"
+              lineForeground={styles.color.foreground}
+              lineBackground={styles.color.background}
+            />
           </div>
           <div className="meters-meterwrap">
             <MeterLine
@@ -179,7 +226,14 @@ export default class Meters extends Component {
             />
           </div>
           <div className="meters-meterwrap">
-            <MeterLine lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} />
+            <MeterLine
+              lineWidth={20}
+              value={rand4}
+              rounded={false}
+              textStyle={styles.textStyle}
+              lineForeground={styles.color.foreground}
+              lineBackground={styles.color.background}
+            />
           </div>
         </div>
 
@@ -190,22 +244,38 @@ export default class Meters extends Component {
         {/* -------------------------------- */}
         <div className="meters-row">
           <div className="meters-meterwrap">
-            <MeterBlock value={rand1} />
+            <MeterBlock
+              value={rand1}
+              textColor={styles.color.bright}
+              lineForeground={styles.color.foreground}
+              lineBackground={styles.color.background}
+            />
           </div>
           <div className="meters-meterwrap">
-            <MeterBlock value={rand2} />
+            <MeterBlock
+              value={rand2}
+              textColor={styles.color.bright}
+              lineForeground={styles.color.foreground}
+              lineBackground={styles.color.background}
+            />
           </div>
           <div className="meters-meterwrap">
             <MeterBlock
               value={rand3}
               lineBackground="#2E112D"
               lineForeground="#F0433A"
-              textStyle={styles.textStyleBright}
+              textColor={styles.color.background}
               horizontal={false}
             />
           </div>
           <div className="meters-meterwrap">
-            <MeterBlock value={rand4} textStyle={styles.textStyle} horizontal={false} />
+            <MeterBlock
+              value={rand4}
+              lineForeground={styles.color.foreground}
+              lineBackground={styles.color.background}
+              textStyle={styles.textStyle}
+              horizontal={false}
+            />
           </div>
         </div>
 
@@ -216,32 +286,20 @@ export default class Meters extends Component {
         {/* -------------------------------- */}
 
         <div className="meters-row">
-          <div className="meters-meterwrap meters-nobg">
-            <MeterCircle value={rand1} />
+          <div className="meters-meterwrap meters-nobg meters-small">
+            <MeterCircle value={rand1} size={120} />
           </div>
-          <div className="meters-meterwrap meters-nobg">
-            <MeterCircle
-              lineWidth={50}
-              value={rand2}
-              rounded={true}
-              progressStart={180}
-              meterLength={240}
-              rounded={false}
-            />
+          <div className="meters-meterwrap meters-nobg meters-small">
+            <MeterCircleDisk value={rand2} size={120} />
           </div>
-          <div className="meters-meterwrap meters-nobg">
-            <MeterCircle
-              lineWidth={20}
-              value={rand3}
-              rounded={true}
-              lineBackground="#2E112D"
-              lineForeground="#F0433A"
-              progressStart={230}
-              meterLength={260}
-            />
+          <div className="meters-meterwrap meters-nobg meters-small">
+            <MeterCircleSemi value={rand3} size={120} />
           </div>
-          <div className="meters-meterwrap meters-nobg">
-            <MeterCircle lineWidth={30} value={rand4} textStyle={styles.textStyle} progressStart={180} />
+          <div className="meters-meterwrap meters-nobg meters-small">
+            <MeterLine value={rand4} size={120} />
+          </div>
+          <div className="meters-meterwrap meters-nobg meters-small">
+            <MeterBlock value={rand4} size={120} />
           </div>
         </div>
 
