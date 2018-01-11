@@ -38,7 +38,14 @@ export default class MeterBlock extends Component {
     )
     if (!horizontal)
       progressBar = (
-        <line x1={middle} y1={size} x2={middle} y2={fillSize} style={{ stroke: lineForeground }} strokeWidth={size} />
+        <line
+          x1={middle}
+          y1={size}
+          x2={middle}
+          y2={size - fillSize}
+          style={{ stroke: lineForeground }}
+          strokeWidth={size}
+        />
       )
 
     return (
