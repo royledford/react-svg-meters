@@ -116,6 +116,28 @@ export default class Meters extends Component {
 
         <div className="meters-row">
           <div className="meters-meterwrap">
+            <MeterLine value={rand1} />
+          </div>
+          <div className="meters-meterwrap">
+            <MeterLine value={rand2} lineWidth={10} rounded={true} position="top" />
+          </div>
+          <div className="meters-meterwrap">
+            <MeterLine
+              lineWidth={50}
+              value={rand3}
+              rounded={true}
+              lineBackground="#2E112D"
+              lineForeground="#F0433A"
+              textStyle={styles.textStyleBright}
+            />
+          </div>
+          <div className="meters-meterwrap">
+            <MeterLine lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} />
+          </div>
+        </div>
+
+        <div className="meters-row">
+          <div className="meters-meterwrap">
             <MeterBlock value={rand1} />
           </div>
           <div className="meters-meterwrap">
@@ -152,28 +174,6 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap">
             <MeterBlock value={rand4} rounded={false} textStyle={styles.textStyle} horizontal={false} />
-          </div>
-        </div>
-
-        <div className="meters-row">
-          <div className="meters-meterwrap">
-            <MeterLine value={rand1} />
-          </div>
-          <div className="meters-meterwrap">
-            <MeterLine value={rand2} lineWidth={10} rounded={true} position="top" />
-          </div>
-          <div className="meters-meterwrap">
-            <MeterLine
-              lineWidth={50}
-              value={rand3}
-              rounded={true}
-              lineBackground="#2E112D"
-              lineForeground="#F0433A"
-              textStyle={styles.textStyleBright}
-            />
-          </div>
-          <div className="meters-meterwrap">
-            <MeterLine lineWidth={20} value={rand4} rounded={false} textStyle={styles.textStyle} />
           </div>
         </div>
       </div>
