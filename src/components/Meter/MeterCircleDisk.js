@@ -24,7 +24,7 @@ export default class MeterCircleDisk extends Component {
   }
 
   render() {
-    const { size, value, lineBackground, lineForeground, borderColor, textStyle } = this.props
+    const { size, value, lineBackground, borderColor, textStyle } = this.props
 
     // handle case with no border
     const lineWidth = this.props.showBorder ? this.props.lineWidth : 0

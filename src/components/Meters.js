@@ -77,7 +77,6 @@ export default class Meters extends Component {
             <MeterCircle
               lineWidth={50}
               value={rand2}
-              rounded={true}
               progressStart={180}
               meterLength={240}
               rounded={false}

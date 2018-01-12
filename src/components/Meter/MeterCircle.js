@@ -55,9 +55,6 @@ export default class MeterCircle extends Component {
     const progressPercentage = value * meterPercentage / 100
     const progressLength = circumference * progressPercentage
 
-    console.log('circum: ', circumference)
-    console.log('progress len:', progressLength)
-
     // Make sure a valid value is passed (use 0 if not)
     let _progressStart = progressStart - 90
     if (progressStart < 0 || progressStart > 360) {
