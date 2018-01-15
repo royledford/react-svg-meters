@@ -6,8 +6,8 @@ export default class LineMeter extends Component {
     value: PropTypes.number.isRequired,
     size: PropTypes.number,
     lineWidth: PropTypes.number,
-    lineBackground: PropTypes.string,
-    lineForeground: PropTypes.string,
+    backgroundColor: PropTypes.string,
+    foregroundColor: PropTypes.string,
     rounded: PropTypes.bool,
     textStyle: PropTypes.object,
     position: PropTypes.oneOf(['bottom', 'top']),
@@ -15,20 +15,20 @@ export default class LineMeter extends Component {
   static defaultProps = {
     size: 200,
     lineWidth: 36,
-    lineBackground: '#7FB2F0',
-    lineForeground: '#35478C',
+    backgroundColor: '#7FB2F0',
+    foregroundColor: '#35478C',
     rounded: false,
     textStyle: {},
     position: 'bottom',
   }
 
   render() {
-    const { size, value, lineBackground, lineForeground, textStyle, lineWidth, rounded, position } = this.props
+    const { size, value, backgroundColor, foregroundColor, textStyle, lineWidth, rounded, position } = this.props
 
     const baseTextStyle = {
       fontSize: size / 2.5,
       fontWeight: 'bold',
-      fill: this.props.lineForeground,
+      fill: this.props.foregroundColor,
     }
 
     let verticalCoordinate = size / 4 * 3
@@ -51,7 +51,7 @@ export default class LineMeter extends Component {
           y1={verticalCoordinate}
           x2={size}
           y2={verticalCoordinate}
-          style={{ stroke: lineBackground }}
+          style={{ stroke: backgroundColor }}
           strokeWidth={lineWidth}
         />
         {/* foreground */}
@@ -61,7 +61,7 @@ export default class LineMeter extends Component {
           x2={fillSize}
           y2={verticalCoordinate}
           style={{
-            stroke: lineForeground,
+            stroke: foregroundColor,
             strokeLinecap: lineEnd,
           }}
           strokeWidth={lineWidth}

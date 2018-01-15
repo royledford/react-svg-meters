@@ -13,9 +13,9 @@ export default class CircleMeter extends Component {
     /** Stroke width of the meter graphic. */
     lineWidth: PropTypes.number,
     /** Background color for the meter graphic. */
-    lineBackground: PropTypes.string,
+    backgroundColor: PropTypes.string,
     /** Foreground color for the meter graphic. */
-    lineForeground: PropTypes.string,
+    foregroundColor: PropTypes.string,
     /** Start position of the progress portion of the meter graphic. Must be between 0 and 360. */
     progressStart: PropTypes.number,
     /** The arc length in degrees for the meter graphic. For example, a value of 90 would produce a meter that fills 25% of a circle. */
@@ -28,8 +28,8 @@ export default class CircleMeter extends Component {
   static defaultProps = {
     size: 200,
     lineWidth: 16,
-    lineBackground: '#7FB2F0',
-    lineForeground: '#35478C',
+    backgroundColor: '#7FB2F0',
+    foregroundColor: '#35478C',
     progressStart: 0, // in degrees
     meterLength: 360, // in degrees
     rounded: false,
@@ -41,8 +41,8 @@ export default class CircleMeter extends Component {
       size,
       lineWidth,
       value,
-      lineBackground,
-      lineForeground,
+      backgroundColor,
+      foregroundColor,
       rounded,
       textStyle,
       progressStart,
@@ -53,7 +53,7 @@ export default class CircleMeter extends Component {
       fontSize: (size - lineWidth * 2) / 2.5,
       fontWeight: 'bold',
       fontFamily: 'sans-serif',
-      fill: this.props.lineForeground,
+      fill: this.props.foregroundColor,
     }
 
     // The stroke is based on the center of the lineWidth,
@@ -87,7 +87,7 @@ export default class CircleMeter extends Component {
           strokeWidth={`${lineWidth}px`}
           transform={`rotate(${_progressStart} ${size / 2} ${size / 2})`}
           style={{
-            stroke: lineBackground,
+            stroke: backgroundColor,
             strokeLinecap: lineEnd,
             strokeDasharray: circumference,
             strokeDashoffset: circumference - _meterLength,
@@ -103,7 +103,7 @@ export default class CircleMeter extends Component {
           strokeWidth={`${lineWidth}px`}
           transform={`rotate(${_progressStart} ${size / 2} ${size / 2})`}
           style={{
-            stroke: lineForeground,
+            stroke: foregroundColor,
             strokeLinecap: lineEnd,
             strokeDasharray: circumference,
             strokeDashoffset: circumference - progressLength,

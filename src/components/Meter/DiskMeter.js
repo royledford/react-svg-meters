@@ -6,7 +6,7 @@ export default class DiskMeter extends Component {
     value: PropTypes.number.isRequired,
     size: PropTypes.number,
     lineWidth: PropTypes.number,
-    lineBackground: PropTypes.string,
+    backgroundColor: PropTypes.string,
     borderColor: PropTypes.string,
     textColor: PropTypes.string,
     textStyle: PropTypes.object,
@@ -15,7 +15,7 @@ export default class DiskMeter extends Component {
   static defaultProps = {
     size: 200,
     lineWidth: 6,
-    lineBackground: '#7FB2F0',
+    backgroundColor: '#7FB2F0',
     borderColor: '#35478C',
     textColor: '#35478C',
     rounded: false,
@@ -24,7 +24,7 @@ export default class DiskMeter extends Component {
   }
 
   render() {
-    const { size, value, lineBackground, borderColor, textStyle } = this.props
+    const { size, value, backgroundColor, borderColor, textStyle } = this.props
 
     // handle case with no border
     const lineWidth = this.props.showBorder ? this.props.lineWidth : 0
@@ -81,7 +81,7 @@ export default class DiskMeter extends Component {
 
         {/* foreground */}
         <circle
-          style={{ fill: lineBackground }}
+          style={{ fill: backgroundColor }}
           cx={size / 2}
           cy={size / 2}
           r={innerRadius}
