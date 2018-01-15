@@ -5,23 +5,23 @@ export default class BlockMeter extends Component {
   static propTypes = {
     value: PropTypes.number.isRequired,
     size: PropTypes.number,
-    lineBackground: PropTypes.string,
-    lineForeground: PropTypes.string,
+    backgroundColor: PropTypes.string,
+    foregroundColor: PropTypes.string,
     textColor: PropTypes.string,
     textStyle: PropTypes.object,
-    horizontal: PropTypes.bool,
+    direction: PropTypes.oneOf(['horizontal', 'vertical']),
   }
   static defaultProps = {
     size: 200,
-    lineBackground: '#7FB2F0',
-    lineForeground: '#35478C',
+    backgroundColor: '#7FB2F0',
+    foregroundColor: '#35478C',
     textColor: '#4E7AC7',
     textStyle: {},
-    horizontal: true,
+    direction: 'horizontal',
   }
 
   render() {
-    const { size, value, lineBackground, lineForeground, textStyle, horizontal } = this.props
+    const { size, value, backgroundColor, foregroundColor, textStyle, direction } = this.props
 
     const baseTextStyle = {
       fontSize: size / 2.5,
@@ -36,16 +36,16 @@ export default class BlockMeter extends Component {
     let textStyleOveride = { ...baseTextStyle, ...textStyle }
 
     let progressBar = (
-      <line x1={0} y1={middle} x2={fillSize} y2={middle} style={{ stroke: lineForeground }} strokeWidth={size} />
+      <line x1={0} y1={middle} x2={fillSize} y2={middle} style={{ stroke: foregroundColor }} strokeWidth={size} />
     )
-    if (!horizontal)
+    if (direction === 'vertical')
       progressBar = (
         <line
           x1={middle}
           y1={size}
           x2={middle}
           y2={size - fillSize}
-          style={{ stroke: lineForeground }}
+          style={{ stroke: foregroundColor }}
           strokeWidth={size}
         />
       )
@@ -53,7 +53,7 @@ export default class BlockMeter extends Component {
     return (
       <svg width={size} height={size} viewBox={viewBox} style={{ fill: 'none' }}>
         {/* background */}
-        <line x1={0} y1={middle} x2={size} y2={middle} style={{ stroke: lineBackground }} strokeWidth={size} />
+        <line x1={0} y1={middle} x2={size} y2={middle} style={{ stroke: backgroundColor }} strokeWidth={size} />
         {/* foreground */}
         {progressBar}
         <text style={textStyleOveride} className="circle-text" x="50%" y="50%" dy=".3em" textAnchor="middle">

@@ -69,8 +69,8 @@ export default class Meters extends Component {
           <div className="meters-meterwrap">
             <CircleMeter
               value={rand1}
-              lineForeground={styles.color.foreground}
-              lineBackground={styles.color.background}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
             />
           </div>
           <div className="meters-meterwrap">
@@ -80,8 +80,8 @@ export default class Meters extends Component {
               progressStart={180}
               meterLength={240}
               rounded={false}
-              lineForeground={styles.color.foreground}
-              lineBackground={styles.color.background}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
             />
           </div>
           <div className="meters-meterwrap">
@@ -89,8 +89,8 @@ export default class Meters extends Component {
               lineWidth={20}
               value={rand3}
               rounded={true}
-              lineBackground="#2E112D"
-              lineForeground="#F0433A"
+              backgroundColor="#2E112D"
+              foregroundColor="#F0433A"
               progressStart={230}
               meterLength={260}
             />
@@ -101,8 +101,8 @@ export default class Meters extends Component {
               value={rand4}
               textStyle={styles.textStyle}
               progressStart={180}
-              lineForeground={styles.color.foreground}
-              lineBackground={styles.color.background}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
             />
           </div>
         </div>
@@ -116,16 +116,16 @@ export default class Meters extends Component {
           <div className="meters-meterwrap">
             <HalfCircleMeter
               value={rand1}
-              lineForeground={styles.color.foreground}
-              lineBackground={styles.color.background}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
             />
           </div>
           <div className="meters-meterwrap">
             <HalfCircleMeter
               lineWidth={70}
               value={rand2}
-              lineForeground={styles.color.foreground}
-              lineBackground={styles.color.background}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
             />
           </div>
           <div className="meters-meterwrap">
@@ -133,8 +133,8 @@ export default class Meters extends Component {
               lineWidth={20}
               value={rand3}
               rounded={true}
-              lineBackground="#2E112D"
-              lineForeground="#F0433A"
+              backgroundColor="#2E112D"
+              foregroundColor="#F0433A"
             />
           </div>
           <div className="meters-meterwrap">
@@ -142,8 +142,8 @@ export default class Meters extends Component {
               lineWidth={30}
               value={rand4}
               textStyle={styles.textStyle}
-              lineForeground={styles.color.foreground}
-              lineBackground={styles.color.background}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
             />
           </div>
         </div>
@@ -159,7 +159,7 @@ export default class Meters extends Component {
               value={rand1}
               textColor={styles.color.foreground}
               borderColor={styles.color.background}
-              lineBackground={styles.color.background}
+              backgroundColor={styles.color.background}
             />
           </div>
           <div className="meters-meterwrap">
@@ -167,7 +167,7 @@ export default class Meters extends Component {
               value={rand2}
               showBorder={false}
               textColor={styles.color.foreground}
-              lineBackground={styles.color.background}
+              backgroundColor={styles.color.background}
             />
           </div>
           <div className="meters-meterwrap">
@@ -175,7 +175,7 @@ export default class Meters extends Component {
               lineWidth={10}
               value={rand3}
               borderColor={styles.color.background}
-              lineBackground="#F0433A"
+              backgroundColor="#F0433A"
               textColor="#2E112D"
             />
           </div>
@@ -186,7 +186,7 @@ export default class Meters extends Component {
               textStyle={styles.textStyle}
               textColor={styles.color.foreground}
               borderColor={styles.color.background}
-              lineBackground={styles.color.background}
+              backgroundColor={styles.color.background}
             />
           </div>
         </div>
@@ -200,8 +200,8 @@ export default class Meters extends Component {
           <div className="meters-meterwrap">
             <LineMeter
               value={rand1}
-              lineForeground={styles.color.foreground}
-              lineBackground={styles.color.background}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
             />
           </div>
           <div className="meters-meterwrap">
@@ -210,8 +210,8 @@ export default class Meters extends Component {
               lineWidth={50}
               rounded={true}
               position="top"
-              lineForeground={styles.color.foreground}
-              lineBackground={styles.color.background}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
             />
           </div>
           <div className="meters-meterwrap">
@@ -219,8 +219,8 @@ export default class Meters extends Component {
               lineWidth={10}
               value={rand3}
               rounded={true}
-              lineBackground="#2E112D"
-              lineForeground="#F0433A"
+              backgroundColor="#2E112D"
+              foregroundColor="#F0433A"
               textStyle={styles.textStyleBright}
             />
           </div>
@@ -230,8 +230,8 @@ export default class Meters extends Component {
               value={rand4}
               rounded={false}
               textStyle={styles.textStyle}
-              lineForeground={styles.color.foreground}
-              lineBackground={styles.color.background}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
             />
           </div>
         </div>
@@ -246,34 +246,34 @@ export default class Meters extends Component {
             <BlockMeter
               value={rand1}
               textColor={styles.color.bright}
-              lineForeground={styles.color.foreground}
-              lineBackground={styles.color.background}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
             />
           </div>
           <div className="meters-meterwrap">
             <BlockMeter
               value={rand2}
               textColor={styles.color.bright}
-              lineForeground={styles.color.foreground}
-              lineBackground={styles.color.background}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
             />
           </div>
           <div className="meters-meterwrap">
             <BlockMeter
               value={rand3}
-              lineBackground="#2E112D"
-              lineForeground="#F0433A"
+              backgroundColor="#2E112D"
+              foregroundColor="#F0433A"
               textColor={styles.color.background}
-              horizontal={false}
+              direction="vertical"
             />
           </div>
           <div className="meters-meterwrap">
             <BlockMeter
               value={rand4}
-              lineForeground={styles.color.foreground}
-              lineBackground={styles.color.background}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
               textStyle={styles.textStyle}
-              horizontal={false}
+              direction="vertical"
             />
           </div>
         </div>
