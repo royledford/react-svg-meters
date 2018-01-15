@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-export default class MeterLine extends Component {
+export default class LineMeter extends Component {
   static propTypes = {
     value: PropTypes.number.isRequired,
     size: PropTypes.number,

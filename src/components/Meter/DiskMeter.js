@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-export default class MeterCircleDisk extends Component {
+export default class DiskMeter extends Component {
   static propTypes = {
     value: PropTypes.number.isRequired,
     size: PropTypes.number,

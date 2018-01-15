@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 /**
  * Circular meter
  */
-export default class MeterCircle extends Component {
+export default class CircleMeter extends Component {
   static propTypes = {
     /** A number representing the percentage to fill on the meter. Must be between 0 and 100. */
     value: PropTypes.number.isRequired,
