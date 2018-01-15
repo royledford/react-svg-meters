@@ -1,16 +1,28 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+/**
+ * Circular meter
+ */
 export default class MeterCircle extends Component {
   static propTypes = {
+    /** A number representing the percentage to fill on the meter. Must be between 0 and 100. */
     value: PropTypes.number.isRequired,
+    /** Size of the meter. */
     size: PropTypes.number,
+    /** Stroke width of the meter graphic. */
     lineWidth: PropTypes.number,
+    /** Background color for the meter graphic. */
     lineBackground: PropTypes.string,
+    /** Foreground color for the meter graphic. */
     lineForeground: PropTypes.string,
+    /** Start position of the progress portion of the meter graphic. Must be between 0 and 360. */
     progressStart: PropTypes.number,
+    /** The arc length in degrees for the meter graphic. For example, a value of 90 would produce a meter that fills 25% of a circle. */
     meterLength: PropTypes.number,
+    /** Set to true to round the ends of the progress portion of the meter graphic. */
     rounded: PropTypes.bool,
+    /** Override the inline styles of the text object. Must be a valid react style object. */
     textStyle: PropTypes.object,
   }
   static defaultProps = {
@@ -40,6 +52,7 @@ export default class MeterCircle extends Component {
     const baseTextStyle = {
       fontSize: (size - lineWidth * 2) / 2.5,
       fontWeight: 'bold',
+      fontFamily: 'sans-serif',
       fill: this.props.lineForeground,
     }
 
