@@ -22,7 +22,7 @@ export default class BlockMeter extends Component {
     direction: PropTypes.oneOf(['horizontal', 'vertical']),
     /** Name of a css class that can be applied to the root SVG element of the meter. */
     className: PropTypes.string,
-    /** A group of styles that can be applied to the root SVG element of the meter. */
+    /** A style object that can be applied to the root SVG element of the meter. */
     style: PropTypes.object,
   }
   static defaultProps = {
@@ -68,7 +68,7 @@ export default class BlockMeter extends Component {
       )
 
     return (
-      <svg width={size} height={size} viewBox={viewBox} style={{ fill: 'none' }} className={className} style={style}>
+      <svg width={size} height={size} viewBox={viewBox} className={className} style={style}>
         {/* background */}
         <line x1={0} y1={middle} x2={size} y2={middle} style={{ stroke: backgroundColor }} strokeWidth={size} />
         {/* foreground */}

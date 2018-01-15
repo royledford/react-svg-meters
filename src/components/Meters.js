@@ -75,7 +75,7 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap">
             <CircleMeter
-              lineWidth={50}
+              thickness={50}
               value={rand2}
               progressStart={180}
               meterLength={240}
@@ -86,7 +86,7 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap">
             <CircleMeter
-              lineWidth={20}
+              thickness={20}
               value={rand3}
               rounded={true}
               backgroundColor="#2E112D"
@@ -97,7 +97,7 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap">
             <CircleMeter
-              lineWidth={30}
+              thickness={30}
               value={rand4}
               textStyle={styles.textStyle}
               progressStart={180}
@@ -122,7 +122,7 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap">
             <HalfCircleMeter
-              lineWidth={70}
+              thickness={70}
               value={rand2}
               foregroundColor={styles.color.foreground}
               backgroundColor={styles.color.background}
@@ -130,7 +130,7 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap">
             <HalfCircleMeter
-              lineWidth={20}
+              thickness={20}
               value={rand3}
               rounded={true}
               backgroundColor="#2E112D"
@@ -139,7 +139,7 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap">
             <HalfCircleMeter
-              lineWidth={30}
+              thickness={30}
               value={rand4}
               textStyle={styles.textStyle}
               foregroundColor={styles.color.foreground}
@@ -172,7 +172,7 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap">
             <DiskMeter
-              lineWidth={10}
+              thickness={10}
               value={rand3}
               borderColor={styles.color.background}
               backgroundColor="#F0433A"
@@ -181,7 +181,7 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap">
             <DiskMeter
-              lineWidth={20}
+              thickness={20}
               value={rand4}
               textStyle={styles.textStyle}
               textColor={styles.color.foreground}
@@ -207,7 +207,7 @@ export default class Meters extends Component {
           <div className="meters-meterwrap">
             <LineMeter
               value={rand2}
-              lineWidth={50}
+              thickness={50}
               rounded={true}
               position="top"
               foregroundColor={styles.color.foreground}
@@ -216,7 +216,7 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap">
             <LineMeter
-              lineWidth={10}
+              thickness={10}
               value={rand3}
               rounded={true}
               backgroundColor="#2E112D"
@@ -226,7 +226,7 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap">
             <LineMeter
-              lineWidth={20}
+              thickness={20}
               value={rand4}
               rounded={false}
               textStyle={styles.textStyle}
