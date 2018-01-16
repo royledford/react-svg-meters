@@ -13,6 +13,8 @@ export default class LineMeter extends Component {
     backgroundColor: PropTypes.string,
     /** Foreground color for the meter graphic. */
     foregroundColor: PropTypes.string,
+    /** Color of the text object in the meter graphic. */
+    textColor: PropTypes.string,
     /** If true, will round the ends of the meter graphic. */
     rounded: PropTypes.bool,
     /** Override the inline styles of the text object. Must be a valid style object. */
@@ -54,7 +56,7 @@ export default class LineMeter extends Component {
       fontSize: size / 2.5,
       fontWeight: 'bold',
       fontFamily: 'sans-serif',
-      fill: this.props.foregroundColor,
+      fill: this.props.textColor || this.props.foregroundColor,
     }
 
     let verticalCoordinate = size / 4 * 3

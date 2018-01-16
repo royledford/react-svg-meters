@@ -73,7 +73,7 @@ export default class BlockMeter extends Component {
         <line x1={0} y1={middle} x2={size} y2={middle} style={{ stroke: backgroundColor }} strokeWidth={size} />
         {/* foreground */}
         {progressBar}
-        <text style={textStyleOveride} className="circle-text" x="50%" y="50%" dy=".3em" textAnchor="middle">
+        <text style={textStyleOveride} x="50%" y="50%" dy=".3em" textAnchor="middle">
           {`${value}%`}
         </text>
       </svg>

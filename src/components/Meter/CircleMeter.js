@@ -16,6 +16,8 @@ export default class CircleMeter extends Component {
     backgroundColor: PropTypes.string,
     /** Foreground color for the meter graphic. */
     foregroundColor: PropTypes.string,
+    /** Color of the text object in the meter graphic. */
+    textColor: PropTypes.string,
     /** Start position of the progress portion of the meter graphic in degrees. Must be between 0 and 360. */
     progressStart: PropTypes.number,
     /** The arc length in degrees for the meter graphic. For example, a value of 90 would produce a meter that fills 25% of a circle. */
@@ -34,6 +36,7 @@ export default class CircleMeter extends Component {
     thickness: 16,
     backgroundColor: '#7FB2F0',
     foregroundColor: '#35478C',
+    textColor: null,
     progressStart: 0, // in degrees
     meterLength: 360, // in degrees
     rounded: false,
@@ -61,7 +64,7 @@ export default class CircleMeter extends Component {
       fontSize: (size - thickness * 2) / 2.5,
       fontWeight: 'bold',
       fontFamily: 'sans-serif',
-      fill: this.props.foregroundColor,
+      fill: this.props.textColor || this.props.foregroundColor,
     }
 
     // The stroke width originates at the center of the element.

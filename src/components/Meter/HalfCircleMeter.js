@@ -13,6 +13,8 @@ export default class HalfCircleMeter extends Component {
     backgroundColor: PropTypes.string,
     /** Foreground color for the meter graphic. */
     foregroundColor: PropTypes.string,
+    /** Color of the text object in the meter graphic. */
+    textColor: PropTypes.string,
     /** If true, will round the ends of the meter graphic. */
     rounded: PropTypes.bool,
     /** Override the inline styles of the text object. Must be a valid style object. */
@@ -50,7 +52,7 @@ export default class HalfCircleMeter extends Component {
       fontSize: (size - thickness * 2) / 2.8,
       fontWeight: 'bold',
       fontFamily: 'sans-serif',
-      fill: this.props.foregroundColor,
+      fill: this.props.textColor || this.props.foregroundColor,
     }
 
     // The stroke width originates at the center of the element.
@@ -75,10 +77,9 @@ export default class HalfCircleMeter extends Component {
         {/* background */}
         <path
           d={`M${startX},${startY}a${radius},${radius} 0 0,1 ${internalWidth},0`}
-          stroke={backgroundColor}
           strokeMiterlimit="10"
           strokeWidth={`${thickness}px`}
-          style={{ fill: 'none' }}
+          style={{ fill: 'none', stroke: backgroundColor }}
         />
 
         {/* foreground */}
