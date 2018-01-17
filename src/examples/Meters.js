@@ -20,7 +20,7 @@ export default class Meters extends Component {
   }
 
   componentDidMount() {
-    const id = setInterval(this.randomize, 2000)
+    const id = setInterval(this.randomize, 1000)
     this.setState({ intervalId: id })
   }
 
@@ -299,6 +299,57 @@ export default class Meters extends Component {
           </div>
           <div className="meters-meterwrap meters-nobg meters-small">
             <BlockMeter value={rand4} size={120} />
+          </div>
+        </div>
+
+        {/* -------------------------------- */}
+
+        {/*            All in a row         */}
+
+        {/* -------------------------------- */}
+
+        <div className="meters-row">
+          <div className="meters-meterwrap meters-small">
+            <CircleMeter
+              value={rand1}
+              size={120}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
+            />
+          </div>
+          <div className="meters-meterwrap meters-small">
+            <DiskMeter
+              value={rand2}
+              size={120}
+              backgroundColor={styles.color.background}
+              borderColor={styles.color.background}
+              textColor={styles.color.foreground}
+            />
+          </div>
+          <div className="meters-meterwrap meters-small">
+            <HalfCircleMeter
+              value={rand3}
+              size={120}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
+            />
+          </div>
+          <div className="meters-meterwrap meters-small">
+            <LineMeter
+              value={rand4}
+              size={120}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
+            />
+          </div>
+          <div className="meters-meterwrap meters-small">
+            <BlockMeter
+              value={rand4}
+              size={120}
+              textColor={styles.color.bright}
+              foregroundColor={styles.color.foreground}
+              backgroundColor={styles.color.background}
+            />
           </div>
         </div>
 
