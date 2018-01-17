@@ -15,13 +15,13 @@
 Install via npm:
 
 ```bash
-$ npm install react-svg-meter --save
+$ npm install react-svg-meters --save
 ```
 
 or
 
 ```bash
-$ yarn add react-svg-meter
+$ yarn add react-svg-meters
 ```
 
 ## Usage
