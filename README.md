@@ -1,4 +1,4 @@
-!["Screenshot of react-svg-meters](./docs/img/meters-animated.gif)
+![Screenshot of react-svg-meters](./docs/img/meters-animated.gif)
 
 <div align="center">
     <h2>React SVG Meters</h2>
