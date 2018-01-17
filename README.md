@@ -18,7 +18,7 @@ Install via npm:
 $ npm install react-svg-meters --save
 ```
 
-or
+or yarn:
 
 ```bash
 $ yarn add react-svg-meters
@@ -52,7 +52,7 @@ Why use Svg? It is [supported](http://caniuse.com/#search=svg) by all major brow
 
 ### License
 
-This repository has been released under the [MIT License](LICENSE)
+This repository has been released under the [MIT License](LICENSE).
 
 ### Acknowledgments
 
@@ -60,4 +60,4 @@ Just a shout out to all the various things that helped maked this library
 
 * Facebook for [react](https://reactjs.org/) and [create-react-app](https://github.com/facebookincubator/create-react-app)
 * The folks at [React Styleguidist](https://react-styleguidist.js.org/) for providing a tool to build the documentation for library
-* All the authors, coders, and friends who inspired me to release an open source project.
+* All the authors, coders, and friends who inspired me to release an open source project
