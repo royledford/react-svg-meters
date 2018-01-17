@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './css/normalize.css'
-import './css/reset.css'
-import './index.css'
-import App from './App'
-import registerServiceWorker from './registerServiceWorker'
+import './examples/styles/normalize.css'
+import './examples/styles/reset.css'
+import Meters from './examples/Meters'
 
-ReactDOM.render(<App />, document.getElementById('root'))
-registerServiceWorker()
+// This is used for viewing the examples page in ./src/examples
+// To use type 'yarn start'
+ReactDOM.render(<Meters />, document.getElementById('root'))
