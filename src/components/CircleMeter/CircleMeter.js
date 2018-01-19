@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 /**
- * Circular meter
+ * Circular style meter
  */
 export default class CircleMeter extends Component {
   static propTypes = {

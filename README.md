@@ -1,4 +1,6 @@
-![Screenshot of react-svg-meters](./docs/img/meters-animated.gif)
+<div align="center">
+    <img src="https://raw.githubusercontent.com/royledford/react-svg-meters/master/docs/img/meters-animated.gif?raw=true"/>
+</div>
 
 <div align="center">
     <h2>React SVG Meters</h2>
@@ -78,7 +80,7 @@ $ yarn test
 $ yarn styleguide
 ```
 
-## Building and deploying
+## Building
 
 #### Documentation
 
@@ -87,15 +89,6 @@ The documentation is hosted as a Github project page on the gh-pages branch.
 ```bash
 # to build locally
 $ yarn run styleguide:build
-
-# to deploy the documentation to gh-pages
-$ yarn run publish:docs
-```
-
-#### NPM Package
-
-```bash
-# TODO: Update this section
 ```
 
 ## The other stuff

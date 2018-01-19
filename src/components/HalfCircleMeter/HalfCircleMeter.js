@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+/**
+ * Semi-circle style meter
+ */
 export default class HalfCircleMeter extends Component {
   static propTypes = {
     /** A number representing the percentage to fill on the meter. Must be between 0 and 100. */

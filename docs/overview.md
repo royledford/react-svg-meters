@@ -14,7 +14,7 @@ $ yarn add react-svg-meters
 
 ```bash
 import React from 'react'
-import CircleMeter from 'react-svg-meters'
+import { CircleMeter } from 'react-svg-meters'
 
 const ReactSampleMeter = () => {
   <div style={{ padding: '20px' }}>
@@ -33,7 +33,7 @@ const ReactSampleMeter = () => {
 
 ```bash
 import React from 'react';
-import CircleMeter from 'react-svg-meters'
+import { CircleMeter } from 'react-svg-meters'
 
 const ReactSampleMeter = () => {
   <div style={{padding: '20px'}>

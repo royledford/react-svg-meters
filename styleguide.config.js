@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  ignore: ['**/src/examples/*.js', '**/*.test.js', '**/src/components/index.js'],
+  ignore: ['**/src/examples/*.js', '**/*.test.js', '**/src/components/index.js', '**/src/components/**/index.js'],
   template: './docs/template.html',
   webpackConfig: require('./config/webpack.config.dev.js'),
   sections: [
