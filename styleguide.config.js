@@ -1,7 +1,8 @@
 const path = require('path')
 module.exports = {
-  ignore: ['**/src/components/Home.js', '**/*.test.js', '**/components/Meters.js'],
+  ignore: ['**/src/examples/*.js', '**/*.test.js', '**/src/components/index.js'],
   template: './docs/template.html',
+  webpackConfig: require('./config/webpack.config.dev.js'),
   sections: [
     {
       name: 'React SVG Meters',
@@ -17,7 +18,7 @@ module.exports = {
   ],
   getComponentPathLine(componentPath) {
     const name = path.basename(componentPath, '.js')
-    const dir = path.dirname(componentPath)
+    // const dir = path.dirname(componentPath)
     return `import { ${name} } from 'react-svg-meters';`
   },
   showUsage: true,
