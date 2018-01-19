@@ -25,7 +25,7 @@
     "prebuild:lib": "rimraf lib",
     "build:lib": "npm run build:commonjs && npm run build:css",
     "publish:docs": "npm run styleguide:build && npm run gh-pages",
-    "publish:patch": "nnpm version patch && npm publish",
+    "publish:patch": "npm version patch && npm publish",
     "publish:minor": "npm version minor && npm publish",
     "publish:major": "npm version major && npm publish"
   },
