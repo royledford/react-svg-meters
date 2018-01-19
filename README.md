@@ -1,11 +1,11 @@
 <div align="center">
+<p>Simple and stylish meters built with SVG for React projects.</p>
     <img src="https://raw.githubusercontent.com/royledford/react-svg-meters/master/docs/img/meters-animated.gif?raw=true"/>
 </div>
 
 <div align="center">
     <h2>React SVG Meters</h2>
     <p align="center">
-        <p>Simple and stylish meters built with SVG for React projects.</p>
         <a href="https://royledford.github.io/react-svg-meters">
             <b>View the documentation »</b>
         </a>
