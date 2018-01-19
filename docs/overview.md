@@ -3,24 +3,22 @@
 <span style="color: #666; font-size: 14px; font-family: sans-serif;">Install</span>
 
 ```bash
-npm install react-svg-meters
-```
+$ npm install react-svg-meters --save
 
-<span style="color: #666; font-size: 14px; font-family: sans-serif;">or</span>
+# or
 
-```bash
-yarn add react-svg-meters
+$ yarn add react-svg-meters
 ```
 
 <span style="color: #666; font-size: 14px; font-family: sans-serif;">Add it to a react component</span>
 
 ```bash
-import React from 'react';
+import React from 'react'
 import CircleMeter from 'react-svg-meters'
 
 const ReactSampleMeter = () => {
-  <div style={{padding: '20px'}>
-    <CircleMeter size={100} value={75}>
+  <div style={{ padding: '20px' }}>
+    <CircleMeter value={75} size={100} />
   </div>
 }
 ```

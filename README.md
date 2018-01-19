@@ -3,7 +3,7 @@
 <div align="center">
     <h2>React SVG Meters</h2>
     <p align="center">
-        <p>Simple and stylish meters built with SVG for React projects with zero dependencies.</p>
+        <p>Simple and stylish meters built with SVG for React projects.</p>
         <a href="https://royledford.github.io/react-svg-meters">
             <b>View the documentation »</b>
         </a>
@@ -42,9 +42,63 @@ render(<App />, document.querySelector('#app'))
 
 ## Built With
 
-* [React](https://reactjs.org/) - The library used to built the meters.
-* [Styleguidist](https://react-styleguidist.js.org/) - Used to create the documentation.
-* [Jest](https://facebook.github.io/jest/) and [Enzyme](https://github.com/airbnb/enzyme) - For testing utils.
+* This was originally built with [create-reat-app](https://github.com/facebookincubator/create-react-app) but was ejected to build the npm package.
+* [React](https://reactjs.org/) - the library used to built the meters.
+* [Styleguidist](https://react-styleguidist.js.org/) - for the documentation.
+* [Jest](https://facebook.github.io/jest/) and [Enzyme](https://github.com/airbnb/enzyme) - for testing utils.
+
+## Development
+
+To setup the development environment.
+
+```bash
+# to install locally
+$ git clone https://github.com/royledford/react-svg-meters.git
+
+# install
+$ yarn install
+
+# run the examples
+$ yarn start
+# and point your browser to http://localhost:3500/
+
+# to run the documentation
+$ yarn styleguide
+```
+
+#### Running tests
+
+```bash
+$ yarn test
+```
+
+#### Viewing/Running the documentation
+
+```bash
+$ yarn styleguide
+```
+
+## Building and deploying
+
+#### Documentation
+
+The documentation is hosted as a Github project page on the gh-pages branch.
+
+```bash
+# to build locally
+$ yarn run styleguide:build
+
+# to deploy the documentation to gh-pages
+$ yarn run publish:docs
+```
+
+#### NPM Package
+
+```bash
+# TODO: Update this section
+```
+
+## The other stuff
 
 ### svg
 
