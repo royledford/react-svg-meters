@@ -1,0 +1,15 @@
+.navigation {
+  float: left;
+  width: 250px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation--link {
+  display: block;
+  padding: 12px;
+}
+
+.navigation--link-active {
+  background-color: ;
+}
