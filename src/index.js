@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './examples/styles/normalize.css'
-import './examples/styles/reset.css'
-import Meters from './examples/Meters'
+import Docs from './docs/Docs'
+import './docs/styles/normalize.css'
+import './docs/styles/reset.css'
+import './docs/styles/vars.css'
+import './docs/styles/base.css'
+import './index.css'
 
-// This is used for viewing the examples page in ./src/examples
-// To use type 'yarn start'
-ReactDOM.render(<Meters />, document.getElementById('root'))
+ReactDOM.render(<Docs />, document.getElementById('root'))
