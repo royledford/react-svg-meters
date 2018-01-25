@@ -43,6 +43,7 @@
   "dependencies": {
     "prismjs": "^1.10.0",
     "prop-types": "^15.6.0",
+    "react-github-corner": "^2.1.0",
     "react-prism": "^4.3.2"
   },
   "devDependencies": {

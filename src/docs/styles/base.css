@@ -51,20 +51,20 @@ h5 {
   color: var(--heading-font-color);
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5:not(:first-child) {
   margin: 1.5rem 0;
-}
+} */
 
 /* Increased margin on additional headings */
-h1:not(:first-child),
+/* h1:not(:first-child),
 h2:not(:first-child),
 h3:not(:first-child) {
   margin-top: 2rem;
-}
+} */
 
 /* --------------------- */
 /* Heading individual styles */

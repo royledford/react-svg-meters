@@ -1,15 +1,98 @@
-.navigation {
-  float: left;
-  width: 250px;
-  list-style-type: none;
-  padding: 0;
+.navigation--nav {
+  position: fixed;
+  top: 0;
+  width: 0;
+  height: 100%;
+  z-index: 4;
+  overflow: hidden;
+  background-color: var(--white);
+
+  box-shadow: 3px 0 5px rgba(0, 0, 0, 0.192);
+  transition: width 300ms ease-in-out;
 }
 
-.navigation--link {
+.navigation--nav-show {
+  width: 200px;
+}
+
+.navigation--nav-hide {
+  width: 0;
+}
+
+.navigation--bg {
+  position: fixed;
+  top: 0;
+  /* left: 200px; */
+  width: 100%;
+  height: 100%;
+
+  z-index: 2;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  transition: opacity 200ms ease-in-out;
+}
+
+.navigation--bg-show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navigation--bg-hide {
+  opacity: 0;
+}
+
+.navigation--button-close {
+  position: absolute;
+  top: 0;
+  padding: 10px;
+  transform: rotate(180deg);
+}
+
+.navigation--title {
+  margin: 80px 10px 10px 10px;
+}
+
+a.navigation--link {
   display: block;
-  padding: 12px;
+  padding: 10px;
 }
 
-.navigation--link-active {
-  background-color: ;
+a.navigation--link:link,
+a.navigation--link:visited,
+a.navigation--link:active,
+a.navigation--link:focus {
+  color: var(--black);
+  background-color: var(--white);
+  text-decoration: none;
+}
+
+a.navigation--link:hover {
+  /* color: var(--color-light); */
+  background-color: #eee;
+  text-decoration: none;
+}
+
+a.navigation--link.navigation--link-active {
+  background-color: #ccc;
+}
+
+@media screen and (min-width: 600px) {
+  .navigation--nav {
+    width: 200px;
+    overflow: initial;
+    transition: width 300ms ease-in-out;
+    background-color: var(--white);
+  }
+  .navigation--button-close {
+    visibility: hidden;
+  }
+
+  .navigation--bg-show {
+    opacity: 0;
+  }
+
+  .navigation--bg-hide {
+    opacity: 0;
+  }
 }

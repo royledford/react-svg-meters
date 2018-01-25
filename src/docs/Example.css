@@ -1,0 +1,15 @@
+/* Documentation site component styles */
+.example {
+  border: solid 1px #d3d3d3;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #f4f6f9;
+}
+
+.example h4:first-of-type {
+  margin-top: 0;
+}
+
+.example p:last-of-type {
+  margin-bottom: 0;
+}

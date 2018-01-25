@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import CodeExample from './CodeExample'
+import './Example.css'
 
 class Example extends React.Component {
   constructor(props) {

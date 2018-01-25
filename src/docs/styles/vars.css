@@ -2,48 +2,52 @@
   /* --------------------- */
   /* Color */
   /* --------------------- */
-  --brandcolor: #2f27da;
-  --color-light: #c7c5ee;
-  --color-medium: #7873d6;
-  --color-base: #2f27da;
-  --color-dark: #201a96;
-  --color-darker: #0f0d41;
+  --brandcolor: #820333;
+  --color-base: #820333;
+
+  --color-light: #f0433a;
+  --color-medium: #c9283e;
+  --color-dark: #540032;
+  --color-darker: #2e112d;
 
   --primary-color: var(--brandcolor);
   --secondary-color: var(--color-light);
-  --accent-color: rgb(255, 166, 0);
-  --accent-color-dark: rgb(133, 86, 0);
 
-  --color-black: #333;
-  --color-white: #fff;
+  --accent-color: #bc4ff0;
+  --accent-color-dark: #5e2778;
+
+  --black: #333;
+  --white: #fff;
 
   --color-background: #fff;
 
-  --highlight: #ffeea8;
-  --error: #d33c40;
+  --highlight: #ffd93f;
+  --error: #ff2d00;
 
-  --stdshadow: 3px 3px 5px #a0a0a0;
+  --stdshadow: 3px 3px 5px #dadada;
   --bq-border: 10px solid var(--color-light);
+
   /* --------------------- */
   /* Media sizes*/
   /* --------------------- */
-  --mobile-only: 599px;
-  /* @media screen and (max-width: var(--mobile-only)){
+  /* MOBILE ONLY */
+  /* @media screen and (max-width: 599px){
+    .content {
+    }
+  } */
+
+  /* TABLET and larger */
+  /* @media screen and (min-width: 600px;{
     some-content
   } */
 
-  --tablet-up: 600px;
-  /* @media screen and (min-width: var(--tablet-up)){
+  /* DESKTOP and larger */
+  /* @media screen and (min-width: 900px)){
     some-content
   } */
 
-  --desktop-up: 900px;
-  /* @media screen and (min-width: var(--desktop-up)){
-    some-content
-  } */
-
-  --desktop-big-up: 1800px;
-  /* @media screen and (min-width: var(--desktop-big-up)){
+  /* YUGE DESKTOP */
+  /* @media screen and (min-width: 1800px){
     some-content
   } */
 
@@ -59,11 +63,11 @@
   --font-style: normal;
   --font-variant: normal;
   --font-weight: normal;
-  --font-color: var(--color-black);
+  --font-color: var(--black);
   --line-height: 1.6;
 
   /* Headings */
-  --heading-font-color: var(--color-black);
+  --heading-font-color: var(--black);
   --heading-font-weight: 600;
   --heading-font-family: var(--font-stack);
   --heading-line-height: 1.2;

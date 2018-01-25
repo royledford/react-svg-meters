@@ -2,13 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Example from './Example'
 import Props from './Props'
+import './ComponentPage.css'
 
 const ComponentPage = ({ component }) => {
   const { name, description, props, examples } = component
 
   return (
     <div className="componentpage">
-      <h2>{name}</h2>
+      <h2 className="componentpage--title">{name}</h2>
       <p>{description}</p>
 
       <h3>Example{examples.length > 1 && 's'}</h3>
