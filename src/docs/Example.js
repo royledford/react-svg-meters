@@ -22,6 +22,8 @@ class Example extends React.Component {
 
     const codeDisplay = showCode ? '' : 'example--code-hide'
 
+    let descriptionArray = description ? description.split('\n\n') : null
+
     // Must use CommonJS require to dynamically require because ES Modules must be statically analyzable.
     const ExampleComponent = require(`./examples/${this.props.componentName}/${name}`).default
     return (
@@ -30,12 +32,15 @@ class Example extends React.Component {
           <span className="example--name"> {name}</span>
           <span className="example--codelink">{`{ }`}</span>
         </div>
-
         <CodeExample className={`example--code ${codeDisplay}`}>{code}</CodeExample>
+        <div className="example--description-wrap">
+          {description &&
+            descriptionArray.map(desc => {
+              return <p className="example-code-description">{desc}</p>
+            })}
+        </div>
 
         <div className="example--example">
-          {description && <h4>{description}</h4>}
-
           <ExampleComponent />
         </div>
       </div>

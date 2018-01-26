@@ -2,7 +2,6 @@
 .example {
   border: solid 1px #d3d3d3;
   margin-bottom: 16px;
-  background-color: #f4f6f9;
 }
 
 .example h4:first-of-type {
@@ -48,4 +47,13 @@
 
 .example--code-hide {
   max-height: 0;
+}
+
+.example--description-wrap {
+  padding: 26px 16px 16px 16px;
+}
+.example-code-description {
+  margin: 0;
+  margin-bottom: 0.8rem;
+  line-height: 1rem;
 }
