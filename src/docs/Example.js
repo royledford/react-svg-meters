@@ -36,7 +36,11 @@ class Example extends React.Component {
         <div className="example--description-wrap">
           {description &&
             descriptionArray.map(desc => {
-              return <p className="example-code-description">{desc}</p>
+              return (
+                <p className="example-code-description" key={desc}>
+                  {desc}
+                </p>
+              )
             })}
         </div>
 

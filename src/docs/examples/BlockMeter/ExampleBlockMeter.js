@@ -2,7 +2,7 @@ import React from 'react'
 import BlockMeter from 'react-svg-meters/BlockMeter'
 
 /**
- * Examples of the BlockMeter showing the defaults, modified colors, and a different orientations.
+ * Examples of the BlockMeter showing the defaults, modified colors, and a different orientation.
  */
 export default function ExampleBlockMeter() {
   const styles = {
