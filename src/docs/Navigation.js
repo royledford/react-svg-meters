@@ -26,7 +26,7 @@ export default class Navigation extends React.Component {
 
     const navDisplay = show ? 'navigation--nav-show' : 'navigation--nav-hide'
     const navBgDisplay = show ? 'navigation--bg-show' : 'navigation-bg-hide'
-    debugger
+
     return (
       <React.Fragment>
         <nav className={`navigation--nav ${navDisplay}`}>

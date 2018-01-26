@@ -31,23 +31,23 @@
   /* Media sizes*/
   /* --------------------- */
   /* MOBILE ONLY */
-  /* @media screen and (max-width: 599px){
+  /* @media screen and (max-width: 599px) {
     .content {
     }
   } */
 
   /* TABLET and larger */
-  /* @media screen and (min-width: 600px;{
+  /* @media screen and (min-width: 600px) {
     some-content
   } */
 
   /* DESKTOP and larger */
-  /* @media screen and (min-width: 900px)){
+  /* @media screen and (min-width: 900px) {
     some-content
   } */
 
   /* YUGE DESKTOP */
-  /* @media screen and (min-width: 1800px){
+  /* @media screen and (min-width: 1800px) {
     some-content
   } */
 

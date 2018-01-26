@@ -1,7 +1,15 @@
 .componentpage {
-  /* margin: 0 25px 0 225px; */
+  /* margin: 30px 25px 0 225px; */
 }
 
 .componentpage--title {
-  margin-top: 0;
+  margin: 0;
+}
+
+.componentpage--description {
+  margin-top: 30px;
+}
+
+.componentpage--subtitle {
+  margin: 40px 0 12px 0;
 }

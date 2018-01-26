@@ -1,5 +1,64 @@
-.props th,
+.props--table-wrap {
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+}
+
+.props--table {
+  table-layout: fixed;
+  border: 1px solid #eee;
+  width: 800px;
+}
+
+.props--table th,
 td {
   text-align: left;
   padding: 5px;
+}
+
+.props--table th {
+  text-align: left;
+  padding: 5px;
+  background-color: #eee;
+}
+
+/* set the widths of the columns */
+
+.props--table th:nth-child(1) {
+  width: 140px;
+}
+
+.props--table th:nth-child(2) {
+  width: 80px;
+}
+
+.props--table th:nth-child(3) {
+  width: 100px;
+}
+
+.props--table-type {
+  color: rgb(141, 179, 184);
+}
+
+.props--table-default {
+  color: rgb(184, 141, 166);
+}
+
+.props--table-right {
+  text-align: right;
+}
+
+.props--table-highlight {
+  color: var(--color-medium);
+}
+
+.props--footnote {
+  font-size: 0.8rem;
+}
+
+/* TABLET and larger */
+@media screen and (min-width: 600px) {
+  .props--table {
+    width: 100%;
+  }
 }
