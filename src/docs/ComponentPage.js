@@ -17,11 +17,21 @@ const ComponentPage = ({ component }) => {
   })
   propArray.sort((a, b) => a.name > b.name)
 
+  // Convert description into an array of paragraphs
+  let descriptionArray = description ? description.split('\n\n') : null
+
   return (
     <div className="componentpage">
       <h2 className="componentpage--title">{name}</h2>
       <hr />
-      <p className="componentpage--description">{description}</p>
+      {description &&
+        descriptionArray.map(desc => {
+          return (
+            <p className="componentpage--description" key={desc}>
+              {desc}
+            </p>
+          )
+        })}
       <h3 className="componentpage--subtitle">Example{examples.length > 1 && 's'}</h3>
       {examples.length > 0
         ? examples.map(example => <Example key={example.name} example={example} componentName={name} />)
