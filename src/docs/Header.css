@@ -24,9 +24,14 @@
   width: 70px;
 }
 
+/* TABLET and larger */
 @media screen and (min-width: 600px) {
   .header {
     margin-left: 200px;
     width: calc(100% - 200px);
+  }
+  .header--nav-icon {
+    /* have to override the built inline style in the svg */
+    display: none !important;
   }
 }
