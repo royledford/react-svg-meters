@@ -10,7 +10,8 @@ var paths = {
   output: path.join(__dirname, '../config', 'componentData.js'),
 }
 
-const enableWatchMode = process.argv.slice(2) === '--watch'
+const enableWatchMode = process.argv.slice(2)[0] === '--watch'
+
 if (enableWatchMode) {
   // Regenerate component metadata when components or examples change.
   chokidar.watch([paths.examples, paths.components]).on('change', function(event, path) {

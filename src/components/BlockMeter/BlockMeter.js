@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 /**
- * Block style meter
+ * Displays a block style meter that can be used to represent an amount
+ * in a vertical or horizontal direction.
+ *
+ * Useful when you need to show a visual representation along with a value.
  */
 export default class BlockMeter extends Component {
   static propTypes = {
