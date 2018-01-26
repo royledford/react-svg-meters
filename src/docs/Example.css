@@ -1,7 +1,6 @@
 /* Documentation site component styles */
 .example {
   border: solid 1px #d3d3d3;
-  padding: 16px;
   margin-bottom: 16px;
   background-color: #f4f6f9;
 }
@@ -12,4 +11,41 @@
 
 .example p:last-of-type {
   margin-bottom: 0;
+}
+
+.example--header {
+  display: flex;
+  justify-content: space-between;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  background-color: #ebebeb;
+  cursor: pointer;
+
+  /* Overide the <pre> margin */
+  margin-bottom: -7px;
+}
+
+.example--example {
+  padding: 16px;
+  background-color: var(--white);
+}
+
+.example--name {
+  position: relative;
+  left: 16px;
+}
+
+.example--codelink {
+  position: relative;
+  right: 16px;
+}
+
+.example--code {
+  overflow: hidden;
+  transition: max-height 250ms ease-in-out;
+  max-height: 2000px;
+}
+
+.example--code-hide {
+  max-height: 0;
 }

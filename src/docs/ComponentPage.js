@@ -22,12 +22,10 @@ const ComponentPage = ({ component }) => {
       <h2 className="componentpage--title">{name}</h2>
       <hr />
       <p className="componentpage--description">{description}</p>
-
       <h3 className="componentpage--subtitle">Example{examples.length > 1 && 's'}</h3>
       {examples.length > 0
         ? examples.map(example => <Example key={example.name} example={example} componentName={name} />)
         : 'No examples exist.'}
-
       <h3 className="componentpage--subtitle">Props</h3>
       {props ? <Props props={propArray} /> : 'This component accepts no props.'}
     </div>

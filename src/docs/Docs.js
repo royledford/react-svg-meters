@@ -23,13 +23,11 @@ export default class Docs extends React.Component {
 
   toggleNav = () => {
     this.setState({ navShowing: !this.state.navShowing })
-    console.log(this.state.navShowing)
   }
 
   render() {
     const { route, navShowing } = this.state
     const component = route ? componentData.filter(component => component.name === route)[0] : componentData[0]
-
     return (
       <section className="docs">
         <Header showNav={this.toggleNav} />

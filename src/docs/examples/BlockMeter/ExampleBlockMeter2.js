@@ -1,9 +1,5 @@
 // ;sdlfj
 
-/**
- * example test
- */
-
 import React from 'react'
 import BlockMeter from 'react-svg-meters/BlockMeter'
 

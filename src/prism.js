@@ -1,11 +1,10 @@
 /* eslint-disable */
-/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+clike+javascript+jsx */
 /* PrismJS 1.10.0
-http://prismjs.com/download.html?themes=prism-dark&languages=markup+css+clike+javascript+jsx */
+http://prismjs.com/download.html?themes=prism&languages=markup+clike+javascript+jsx */
 var _self =
-    'undefined' != typeof window
+    'undefined' !== typeof window
       ? window
-      : 'undefined' != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? self : {},
+      : 'undefined' !== typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? self : {},
   Prism = (function() {
     var e = /\blang(?:uage)?-(\w+)\b/i,
       t = 0,
@@ -230,7 +229,7 @@ var _self =
       })
     if (
       ((r.stringify = function(e, t, a) {
-        if ('string' == typeof e) return e
+        if ('string' === typeof e) return e
         if ('Array' === n.util.type(e))
           return e
             .map(function(n) {
@@ -301,8 +300,8 @@ var _self =
       _self.Prism
     )
   })()
-'undefined' != typeof module && module.exports && (module.exports = Prism),
-  'undefined' != typeof global && (global.Prism = Prism)
+'undefined' !== typeof module && module.exports && (module.exports = Prism),
+  'undefined' !== typeof global && (global.Prism = Prism)
 ;(Prism.languages.markup = {
   comment: /<!--[\s\S]*?-->/,
   prolog: /<\?[\s\S]+?\?>/,
@@ -330,44 +329,6 @@ var _self =
   (Prism.languages.html = Prism.languages.markup),
   (Prism.languages.mathml = Prism.languages.markup),
   (Prism.languages.svg = Prism.languages.markup)
-;(Prism.languages.css = {
-  comment: /\/\*[\s\S]*?\*\//,
-  atrule: { pattern: /@[\w-]+?.*?(?:;|(?=\s*\{))/i, inside: { rule: /@[\w-]+/ } },
-  url: /url\((?:(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1|.*?)\)/i,
-  selector: /[^{}\s][^{};]*?(?=\s*\{)/,
-  string: { pattern: /("|')(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/, greedy: !0 },
-  property: /[-_a-z\xA0-\uFFFF][-\w\xA0-\uFFFF]*(?=\s*:)/i,
-  important: /\B!important\b/i,
-  function: /[-a-z0-9]+(?=\()/i,
-  punctuation: /[(){};:]/,
-}),
-  (Prism.languages.css.atrule.inside.rest = Prism.util.clone(Prism.languages.css)),
-  Prism.languages.markup &&
-    (Prism.languages.insertBefore('markup', 'tag', {
-      style: {
-        pattern: /(<style[\s\S]*?>)[\s\S]*?(?=<\/style>)/i,
-        lookbehind: !0,
-        inside: Prism.languages.css,
-        alias: 'language-css',
-        greedy: !0,
-      },
-    }),
-    Prism.languages.insertBefore(
-      'inside',
-      'attr-value',
-      {
-        'style-attr': {
-          pattern: /\s*style=("|')(?:\\[\s\S]|(?!\1)[^\\])*\1/i,
-          inside: {
-            'attr-name': { pattern: /^\s*style/i, inside: Prism.languages.markup.tag.inside },
-            punctuation: /^\s*=\s*['"]|['"]\s*$/,
-            'attr-value': { pattern: /.+/i, inside: Prism.languages.css },
-          },
-          alias: 'language-css',
-        },
-      },
-      Prism.languages.markup.tag
-    ))
 Prism.languages.clike = {
   comment: [
     { pattern: /(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/, lookbehind: !0 },
