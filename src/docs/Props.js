@@ -18,17 +18,26 @@ const Props = ({ props }) => {
           </thead>
           <tbody>
             {props.map(prop => {
-              let name = prop.required ? prop.name + ' *' : prop.name
-              let required = prop.required ? 'props--table-highlight' : ''
+              // Make sure all prop values exist so we don't crash on missing ones
+              // This can happen if the dev forgot to add comments or there is a default
+              // with no type.
+              const name = prop.name ? prop.name : ''
+              const required = prop.required ? prop.required : false
+              const type = prop.type ? prop.type.name : ''
+              const defaultValue = prop.defaultValue ? prop.defaultValue.value : ''
+              const description = prop.description ? prop.description : ''
+
+              const nameFormatted = required ? name + ' *' : name
+              const requiredClass = required ? 'props--table-highlight' : ''
 
               return (
-                <tr key={prop.name}>
+                <tr key={name}>
                   <td className="props--table-name">
-                    <span className={`${required}`}>{name}</span>
+                    <span className={`${requiredClass}`}>{nameFormatted}</span>
                   </td>
-                  <td className="props--table-type">{prop.type.name}</td>
-                  <td className="props--table-default">{prop.defaultValue && prop.defaultValue.value}</td>
-                  <td>{prop.description}</td>
+                  <td className="props--table-type">{type}</td>
+                  <td className="props--table-default">{defaultValue}</td>
+                  <td>{description}</td>
                 </tr>
               )
             })}
