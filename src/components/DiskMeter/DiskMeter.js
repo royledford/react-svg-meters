@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 /**
- * Disk shaped meter
+ * Displays a disk shaped meter that fills from bottom to top. Disk meters can
+ * be shown with or without a border..
+ *
+ * Disk meters are great for showing the level or how full something is.
  */
 export default class DiskMeter extends Component {
   static propTypes = {

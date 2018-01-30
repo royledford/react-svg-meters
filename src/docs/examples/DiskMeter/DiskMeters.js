@@ -1,10 +1,11 @@
 import React from 'react'
-import { CircleMeter } from 'react-svg-meters'
+import { DiskMeter } from 'react-svg-meters'
 
 /**
- * Examples of the CircleMeter showing the defaults, modified colors, and modified graphics..
+ * You can change the individual colors of the meter, hide the border and change
+ * the text styles in the disk meter.
  */
-export default function ExampleBlockMeter() {
+export default function DiskMeters() {
   const styles = {
     meter: {
       margin: 8,
@@ -18,32 +19,25 @@ export default function ExampleBlockMeter() {
 
   return (
     <div>
-      <CircleMeter value={35} size={150} style={styles.meter} />
-      <CircleMeter
+      <DiskMeter value={35} size={150} style={styles.meter} />
+      <DiskMeter
         value={75}
         size={150}
-        rounded={true}
-        foregroundColor={styles.color.foreground}
-        backgroundColor={styles.color.background}
+        backgroundColor={styles.color.foreground}
+        textColor={styles.color.background}
+        borderColor={styles.color.foreground}
         style={styles.meter}
       />
-      <CircleMeter
+      <DiskMeter
         value={55}
         size={150}
-        thickness={36}
-        foregroundColor={styles.color.foreground}
-        backgroundColor={styles.color.background}
+        showBorder={false}
+        backgroundColor={styles.color.foreground}
+        textColor={styles.color.background}
         style={styles.meter}
       />
-      <CircleMeter
-        value={85}
-        size={150}
-        thickness={26}
-        backgroundColor="#2E112D"
-        foregroundColor="#F0433A"
-        textColor={styles.color.bright}
-        style={styles.meter}
-      />
+      {/* The text in the meter is svg text so use the fill style to adjust the color */}
+      <DiskMeter value={95} size={150} thickness={14} textStyle={{ fill: 'black' }} style={styles.meter} />
     </div>
   )
 }
