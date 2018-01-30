@@ -29,7 +29,7 @@ export default class Docs extends React.Component {
     const { route, navShowing } = this.state
     const component = route ? componentData.filter(component => component.name === route)[0] : componentData[0]
     return (
-      <section className="docs">
+      <div className="docs">
         <Header showNav={this.toggleNav} />
         <Navigation
           components={componentData.map(component => component.name)}
@@ -40,7 +40,7 @@ export default class Docs extends React.Component {
           <ComponentPage component={component} />
         </div>
         <GithubCorner href="https://github.com/royledford/react-svg-meters" bannerColor="#c9283e" octoColor="#540032" />
-      </section>
+      </div>
     )
   }
 }

@@ -6,7 +6,7 @@ import './Props.css'
 const Props = ({ props }) => {
   return (
     <React.Fragment>
-      <div className="props--table-wrap">
+      <section className="props--table-wrap">
         <table className="props--table">
           <thead>
             <tr>
@@ -34,7 +34,7 @@ const Props = ({ props }) => {
             })}
           </tbody>
         </table>
-      </div>
+      </section>
       <span className="props--footnote">* denotes a required property</span>
     </React.Fragment>
   )

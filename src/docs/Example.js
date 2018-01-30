@@ -27,7 +27,7 @@ class Example extends React.Component {
     // Must use CommonJS require to dynamically require because ES Modules must be statically analyzable.
     const ExampleComponent = require(`./examples/${this.props.componentName}/${name}`).default
     return (
-      <div className="example">
+      <section className="example">
         <div className="example--header" onClick={this.toggleCode}>
           <span className="example--name"> {name}</span>
           <span className="example--codelink">{`{ }`}</span>
@@ -47,7 +47,7 @@ class Example extends React.Component {
         <div className="example--example">
           <ExampleComponent />
         </div>
-      </div>
+      </section>
     )
   }
 }
