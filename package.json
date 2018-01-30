@@ -16,8 +16,9 @@
   "scripts": {
     "prestart": "npm run gen:docs",
     "start": "PORT=3500 node scripts/start.js",
-    "start:docs": "node scripts/generateComponentData.js --watch",
+    "start:docs": "npm-run-all gen:docs watch:docs",
     "gen:docs": "node scripts/generateComponentData.js",
+    "watch:docs": "node scripts/generateComponentData.js --watch",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "gh-pages": "gh-pages -d styleguide",
