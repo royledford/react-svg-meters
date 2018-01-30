@@ -16,7 +16,7 @@ const ComponentPage = ({ component }) => {
     return propArray.push(props[key])
   })
   propArray.sort((a, b) => a.name > b.name)
-
+  debugger
   // Convert description into an array of paragraphs
   let descriptionArray = description ? description.split('\n\n') : null
 

@@ -33,7 +33,6 @@ export default class DiskMeter extends Component {
     backgroundColor: '#7FB2F0',
     borderColor: '#35478C',
     textColor: '#35478C',
-    rounded: false,
     textStyle: {},
     showBorder: true,
     className: '',
