@@ -1,5 +1,4 @@
 import React from 'react'
-import Navigation from './Navigation'
 import ComponentPage from './ComponentPage'
 import componentData from '../../config/componentData'
 import Header from './Header'
@@ -30,12 +29,6 @@ export default class Docs extends React.Component {
     const component = route ? componentData.filter(component => component.name === route)[0] : componentData[0]
     return (
       <div className="docs">
-        <Header showNav={this.toggleNav} />
-        <Navigation
-          components={componentData.map(component => component.name)}
-          closeNav={this.toggleNav}
-          show={navShowing}
-        />
         <div className="docs--content">
           <ComponentPage component={component} />
         </div>

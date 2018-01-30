@@ -1,0 +1,32 @@
+.demo--wrap {
+  padding-top: 90px;
+}
+
+.demo--row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.demo--meter {
+  display: inline-block;
+  width: 244px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #540032;
+}
+
+.demo--meter-nobg {
+  background-color: white;
+}
+
+.demo--meter-small {
+  width: 160px;
+}
+
+@media screen and (min-width: 600px) {
+  .demo--wrap {
+    padding-left: 260px;
+    padding-right: 60px;
+  }
+}

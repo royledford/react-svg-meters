@@ -56,6 +56,7 @@
 a.navigation--link {
   display: block;
   padding: 10px;
+  white-space: nowrap;
 }
 
 a.navigation--link:link,
@@ -77,13 +78,15 @@ a.navigation--link.navigation--link-active {
   background-color: #ccc;
 }
 
+/* Tablet an up */
 @media screen and (min-width: 600px) {
   .navigation--nav {
     width: 200px;
     overflow: initial;
     transition: width 300ms ease-in-out;
-    background-color: var(--white);
+    background-color: var(--color-dark);
   }
+
   .navigation--button-close {
     visibility: hidden;
   }
@@ -94,5 +97,32 @@ a.navigation--link.navigation--link-active {
 
   .navigation--bg-hide {
     opacity: 0;
+  }
+
+  .navigation--title {
+    color: var(--color-medium);
+  }
+
+  a.navigation--link:link,
+  a.navigation--link:visited,
+  a.navigation--link:active,
+  a.navigation--link:focus {
+    color: var(--color-medium);
+    background-color: var(--color-dark);
+    text-decoration: none;
+  }
+
+  a.navigation--link:hover {
+    /* color: var(--color-light); */
+    background-color: var(--color-darker);
+    text-decoration: none;
+  }
+
+  a.navigation--link.navigation--link-active {
+    color: var(--white);
+  }
+
+  .navigation--rule {
+    border-top: 1px solid var(--color-darker);
   }
 }

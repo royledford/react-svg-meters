@@ -1,5 +1,5 @@
 import React from 'react'
-import BlockMeter from 'react-svg-meters/BlockMeter'
+import { BlockMeter } from 'react-svg-meters'
 
 /**
  * Examples of the BlockMeter showing the defaults, modified colors, and a different orientation.
