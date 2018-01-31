@@ -2,7 +2,7 @@ import React from 'react'
 import { HalfCircleMeter } from 'react-svg-meters'
 
 /**
- * You can change the individual colors of the meter, hide the border and change
+ * You can change the individual colors of the meter, and change
  * the text styles in the disk meter. Rounded ends can be applied using by setting
  * the rounded property to true.
  *
