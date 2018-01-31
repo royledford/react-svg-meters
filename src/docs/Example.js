@@ -41,7 +41,7 @@ class Example extends React.Component {
           {description &&
             descriptionArray.map(desc => {
               return (
-                <p className="example-code-description" key={desc}>
+                <p className="example--code-description" key={desc}>
                   {desc}
                 </p>
               )

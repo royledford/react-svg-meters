@@ -52,8 +52,10 @@
 .example--description-wrap {
   padding: 26px 16px 16px 16px;
 }
-.example-code-description {
+
+.example--code-description {
   margin: 0;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
   line-height: 1rem;
+  color: rgba(0, 0, 0, 0.5);
 }
