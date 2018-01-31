@@ -6,6 +6,7 @@ import './Navigation.css'
 export default class Navigation extends React.Component {
   static propTypes = {
     closeNav: PropTypes.func.isRequired,
+    components: PropTypes.array.isRequired,
     handleNavigationClick: PropTypes.func.isRequired,
     showComponents: PropTypes.bool.isRequired,
     show: PropTypes.bool.isRequired,
@@ -15,6 +16,10 @@ export default class Navigation extends React.Component {
     this.state = {
       activeItem: '',
     }
+  }
+
+  componentDidMount() {
+    this.setState({ activeItem: this.props.components[0] })
   }
 
   handleComponentClick = e => {
