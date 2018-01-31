@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Example from './Example'
 import Props from './Props'
+import { camelToNormalCase } from '../helpers/helpers'
 import './ComponentPage.css'
 
 const ComponentPage = ({ component }) => {
@@ -20,9 +21,11 @@ const ComponentPage = ({ component }) => {
   // Convert description into an array of paragraphs
   let descriptionArray = description ? description.split('\n\n') : null
 
+  const formattedName = camelToNormalCase(name)
+
   return (
     <div className="componentpage">
-      <h2 className="componentpage--title">{name}</h2>
+      <h2 className="componentpage--title">{formattedName}</h2>
       <hr />
       {description &&
         descriptionArray.map(desc => {
