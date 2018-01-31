@@ -1,5 +1,6 @@
+Simple and stylish meters built with SVG for React projects.
+
 <div align="center">
-<p>Simple and stylish meters built with SVG for React projects.</p>
     <img src="https://raw.githubusercontent.com/royledford/react-svg-meters/master/docs/img/meters-animated.gif?raw=true"/>
 </div>
 
