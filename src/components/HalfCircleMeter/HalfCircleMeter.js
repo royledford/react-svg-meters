@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 /**
- * Semi-circle style meter
+ * Displays a semi-circle style meter. This is similar to the CircleMeter but
+ * only uses half the vertical space.
  */
 export default class HalfCircleMeter extends Component {
   static propTypes = {
