@@ -11,17 +11,6 @@ import { BlockMeter } from 'react-svg-meters'
  * It is svg text and fill is used to change the text color.
  *
  */
-
-// * You can change the individual colors of the meter, the text position, and change
-// * the text styles in the meter. Rounded ends can be applied by setting
-// * the rounded property to true.
-// *
-// * By default the text color will match the foregroundColor. This can be changed with
-// * the text color property.
-// *
-// * The second example shows the text placed on the bottom by setting the
-// * position property to 'bottom'
-
 export default function ExampleBlockMeter() {
   const styles = {
     meter: {
