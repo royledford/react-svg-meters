@@ -23,7 +23,15 @@ const Props = ({ props }) => {
               // with no type.
               const name = prop.name ? prop.name : ''
               const required = prop.required ? prop.required : false
-              const type = prop.type ? prop.type.name : ''
+              let type = prop.type ? prop.type.name : ''
+
+              // add addtional values and formatting for enums
+              if (type === 'enum') {
+                type = type + ':<br />'
+                const valArray = prop.type.value.map(val => `\u00A0${val.value}`)
+                type = type + valArray.join('<br /> ')
+              }
+
               const defaultValue = prop.defaultValue ? prop.defaultValue.value : ''
               const description = prop.description ? prop.description : ''
 
@@ -35,7 +43,7 @@ const Props = ({ props }) => {
                   <td className="props--table-name">
                     <span className={`${requiredClass}`}>{nameFormatted}</span>
                   </td>
-                  <td className="props--table-type">{type}</td>
+                  <td className="props--table-type" dangerouslySetInnerHTML={{ __html: type }} />
                   <td className="props--table-default">{defaultValue}</td>
                   <td>{description}</td>
                 </tr>

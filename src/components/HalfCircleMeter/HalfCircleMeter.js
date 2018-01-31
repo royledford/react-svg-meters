@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 /**
  * Displays a semi-circle style meter. This is similar to the CircleMeter but
- * only uses half the vertical space.
+ * uses half the vertical space.
  */
 export default class HalfCircleMeter extends Component {
   static propTypes = {

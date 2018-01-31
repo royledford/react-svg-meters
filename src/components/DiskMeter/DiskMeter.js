@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 /**
  * Displays a disk shaped meter that fills from bottom to top. Disk meters can
- * be shown with or without a border..
+ * be shown with or without a border.
  *
  * Disk meters are great for showing the level or how full something is.
  */
@@ -36,7 +36,6 @@ export default class DiskMeter extends Component {
     backgroundColor: '#7FB2F0',
     borderColor: '#35478C',
     textColor: '#35478C',
-    rounded: false,
     textStyle: {},
     showBorder: true,
     className: '',

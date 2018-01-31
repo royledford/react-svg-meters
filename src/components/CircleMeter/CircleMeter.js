@@ -5,9 +5,10 @@ import PropTypes from 'prop-types'
  * Displays a circular style meter. Circle meters can be displayed as a full or
  * partial circle.
  *
- * You can define the start position for the completed portion of the meter.
+ * The start position for the completed portion of the meter can be changed using
+ * progressStart property.
  *
- * You can also a display partial circle.
+ * You can also a display partial circle using the meterLength and progressStart properties..
  */
 export default class CircleMeter extends Component {
   static propTypes = {

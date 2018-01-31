@@ -21,7 +21,7 @@ export default class BlockMeter extends Component {
     textColor: PropTypes.string,
     /** Override the inline styles of the text object using SVG styles. Must be a valid style object. */
     textStyle: PropTypes.object,
-    /** Direction for the progress portion of the meter. */
+    /** Direction for the progress portion of the meter. 'horizontal' grows from left to right, 'vertical' grows from bottom to top. */
     direction: PropTypes.oneOf(['horizontal', 'vertical']),
     /** Name of a css class that can be applied to the root SVG element of the meter. */
     className: PropTypes.string,

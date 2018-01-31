@@ -1,7 +1,6 @@
 import React from 'react'
 import ComponentPage from './ComponentPage'
 import componentData from '../../config/componentData'
-import Header from './Header'
 import GithubCorner from 'react-github-corner'
 import './Docs.css'
 
@@ -25,7 +24,7 @@ export default class Docs extends React.Component {
   }
 
   render() {
-    const { route, navShowing } = this.state
+    const { route } = this.state
     const component = route ? componentData.filter(component => component.name === route)[0] : componentData[0]
     return (
       <div className="docs">
