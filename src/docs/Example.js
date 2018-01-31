@@ -24,6 +24,7 @@ class Example extends React.Component {
     const exampleName = camelToNormalCase(name)
 
     const codeDisplay = showCode ? '' : 'example--code-hide'
+    const codeDisplayHint = showCode ? 'hide code \u21E1' : 'show code \u21E3'
 
     let descriptionArray = description ? description.split('\n\n') : null
 
@@ -34,7 +35,7 @@ class Example extends React.Component {
       <section className="example">
         <div className="example--header" onClick={this.toggleCode}>
           <span className="example--name"> {exampleName}</span>
-          <span className="example--codelink">{`{ }`}</span>
+          <span className="example--codelink">{`${codeDisplayHint}`}</span>
         </div>
         <CodeExample className={`example--code ${codeDisplay}`}>{code}</CodeExample>
         <div className="example--description-wrap">

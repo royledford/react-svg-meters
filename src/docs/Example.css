@@ -35,8 +35,14 @@
 }
 
 .example--codelink {
+  font-size: 0.8rem;
   position: relative;
   right: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.example--codelink:hover {
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .example--code {
