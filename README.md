@@ -11,6 +11,11 @@ Simple and stylish meters built with SVG for React projects.
             <b>View the documentation »</b>
         </a>
     </p>
+
+[![npm](https://img.shields.io/npm/dt/react-svg-meters.svg)](https://www.npmjs.com/package/react-svg-meters)
+[![npm](https://img.shields.io/npm/v/react-svg-meters.svg)](https://www.npmjs.com/package/react-svg-meters)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+
 </div>
 
 ## Installation
