@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 /**
- * Block style meter
+ * Displays a block style meter that can be used to represent an amount
+ * in a vertical or horizontal direction.
+ *
+ * Useful when you need to show a visual representation along with a value.
  */
 export default class BlockMeter extends Component {
   static propTypes = {
@@ -18,7 +21,7 @@ export default class BlockMeter extends Component {
     textColor: PropTypes.string,
     /** Override the inline styles of the text object using SVG styles. Must be a valid style object. */
     textStyle: PropTypes.object,
-    /** Direction for the progress portion of the meter. */
+    /** Direction for the progress portion of the meter. 'horizontal' grows from left to right, 'vertical' grows from bottom to top. */
     direction: PropTypes.oneOf(['horizontal', 'vertical']),
     /** Name of a css class that can be applied to the root SVG element of the meter. */
     className: PropTypes.string,

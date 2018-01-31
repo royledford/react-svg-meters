@@ -1,5 +1,6 @@
+Simple and stylish meters built with SVG for React projects.
+
 <div align="center">
-<p>Simple and stylish meters built with SVG for React projects.</p>
     <img src="https://raw.githubusercontent.com/royledford/react-svg-meters/master/docs/img/meters-animated.gif?raw=true"/>
 </div>
 
@@ -10,6 +11,11 @@
             <b>View the documentation »</b>
         </a>
     </p>
+
+[![npm](https://img.shields.io/npm/dt/react-svg-meters.svg)](https://www.npmjs.com/package/react-svg-meters)
+[![npm](https://img.shields.io/npm/v/react-svg-meters.svg)](https://www.npmjs.com/package/react-svg-meters)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+
 </div>
 
 ## Installation

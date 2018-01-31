@@ -1,0 +1,38 @@
+.header {
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+
+  color: var(--color-medium);
+  background-color: var(--color-dark);
+}
+
+.header--title {
+  font-size: 1.35rem;
+  line-height: 70px;
+  margin: 0;
+  padding: 0;
+  color: var(--color-medium);
+}
+
+.header--nav-icon {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  height: 70px;
+  width: 70px;
+}
+
+/* TABLET and larger */
+@media screen and (min-width: 600px) {
+  .header {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+  .header--nav-icon {
+    /* have to override the built inline style in the svg */
+    display: none !important;
+  }
+}

@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 /**
- * Line style meter
+ * Displays a line / bar style meter with bold text.
+ *
+ * The line meter priortizes the number over the graphic display.
  */
 export default class LineMeter extends Component {
   static propTypes = {
@@ -22,7 +24,7 @@ export default class LineMeter extends Component {
     rounded: PropTypes.bool,
     /** Override the inline styles of the text object. Must be a valid style object. */
     textStyle: PropTypes.object,
-    /** Defines the position of the meter graphic.  */
+    /** Defines the position of the meter graphic. Valid values are 'top' and 'bottom'. */
     position: PropTypes.oneOf(['bottom', 'top']),
     /** Name of a css class that can be applied to the root SVG element of the meter. */
     className: PropTypes.string,
