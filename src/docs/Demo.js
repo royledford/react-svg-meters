@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+
 import CircleMeter from '../components/CircleMeter/CircleMeter'
 import HalfCircleMeter from '../components/HalfCircleMeter/HalfCircleMeter'
 import DiskMeter from '../components/DiskMeter/DiskMeter'
 import BlockMeter from '../components/BlockMeter/BlockMeter'
 import LineMeter from '../components/LineMeter/LineMeter'
 import { randomInteger } from '../helpers/helpers'
-import './Meters.css'
+import './Demo.css'
 
 export default class Meters extends Component {
   constructor(props) {
@@ -54,26 +55,22 @@ export default class Meters extends Component {
     }
 
     return (
-      <div className="meters-wrap">
-        <div className="meters-header">
-          <h1 className="meters-title">React SVG Meters</h1>
-        </div>
-
+      <div className="demo--wrap">
         {/* -------------------------------- */}
 
         {/*            CIRCLES               */}
 
         {/* -------------------------------- */}
 
-        <div className="meters-row">
-          <div className="meters-meterwrap">
+        <div className="demo--row">
+          <div className="demo--meter">
             <CircleMeter
               value={rand1}
               foregroundColor={styles.color.foreground}
               backgroundColor={styles.color.background}
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <CircleMeter
               thickness={50}
               value={rand2}
@@ -84,7 +81,7 @@ export default class Meters extends Component {
               backgroundColor={styles.color.background}
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <CircleMeter
               thickness={20}
               value={rand3}
@@ -95,7 +92,7 @@ export default class Meters extends Component {
               meterLength={260}
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <CircleMeter
               thickness={30}
               value={rand4}
@@ -112,15 +109,15 @@ export default class Meters extends Component {
         {/*         HALF CIRCLES             */}
 
         {/* -------------------------------- */}
-        <div className="meters-row">
-          <div className="meters-meterwrap">
+        <div className="demo--row">
+          <div className="demo--meter">
             <HalfCircleMeter
               value={rand1}
               foregroundColor={styles.color.foreground}
               backgroundColor={styles.color.background}
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <HalfCircleMeter
               thickness={70}
               value={rand2}
@@ -128,7 +125,7 @@ export default class Meters extends Component {
               backgroundColor={styles.color.background}
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <HalfCircleMeter
               thickness={20}
               value={rand3}
@@ -137,7 +134,7 @@ export default class Meters extends Component {
               foregroundColor="#F0433A"
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <HalfCircleMeter
               thickness={30}
               value={rand4}
@@ -153,8 +150,8 @@ export default class Meters extends Component {
         {/*             DISKS                */}
 
         {/* -------------------------------- */}
-        <div className="meters-row">
-          <div className="meters-meterwrap">
+        <div className="demo--row">
+          <div className="demo--meter">
             <DiskMeter
               value={rand1}
               textColor={styles.color.foreground}
@@ -162,7 +159,7 @@ export default class Meters extends Component {
               backgroundColor={styles.color.background}
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <DiskMeter
               value={rand2}
               showBorder={false}
@@ -170,7 +167,7 @@ export default class Meters extends Component {
               backgroundColor={styles.color.background}
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <DiskMeter
               thickness={10}
               value={rand3}
@@ -179,7 +176,7 @@ export default class Meters extends Component {
               textColor="#2E112D"
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <DiskMeter
               thickness={20}
               value={rand4}
@@ -196,15 +193,15 @@ export default class Meters extends Component {
         {/*             LINES                */}
 
         {/* -------------------------------- */}
-        <div className="meters-row">
-          <div className="meters-meterwrap">
+        <div className="demo--row">
+          <div className="demo--meter">
             <LineMeter
               value={rand1}
               foregroundColor={styles.color.foreground}
               backgroundColor={styles.color.background}
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <LineMeter
               value={rand2}
               thickness={50}
@@ -214,7 +211,7 @@ export default class Meters extends Component {
               backgroundColor={styles.color.background}
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <LineMeter
               thickness={10}
               value={rand3}
@@ -224,7 +221,7 @@ export default class Meters extends Component {
               textStyle={styles.textStyleBright}
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <LineMeter
               thickness={20}
               value={rand4}
@@ -241,8 +238,8 @@ export default class Meters extends Component {
         {/*             BLOCKS               */}
 
         {/* -------------------------------- */}
-        <div className="meters-row">
-          <div className="meters-meterwrap">
+        <div className="demo--row">
+          <div className="demo--meter">
             <BlockMeter
               value={rand1}
               textColor={styles.color.bright}
@@ -250,7 +247,7 @@ export default class Meters extends Component {
               backgroundColor={styles.color.background}
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <BlockMeter
               value={rand2}
               textColor={styles.color.bright}
@@ -258,7 +255,7 @@ export default class Meters extends Component {
               backgroundColor={styles.color.background}
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <BlockMeter
               value={rand3}
               backgroundColor="#2E112D"
@@ -267,7 +264,7 @@ export default class Meters extends Component {
               direction="vertical"
             />
           </div>
-          <div className="meters-meterwrap">
+          <div className="demo--meter">
             <BlockMeter
               value={rand4}
               foregroundColor={styles.color.foreground}
@@ -284,20 +281,20 @@ export default class Meters extends Component {
 
         {/* -------------------------------- */}
 
-        <div className="meters-row">
-          <div className="meters-meterwrap meters-nobg meters-small">
+        <div className="demo--row">
+          <div className="demo--meter demo--meter-nobg demo--meter-small">
             <CircleMeter value={rand1} size={120} />
           </div>
-          <div className="meters-meterwrap meters-nobg meters-small">
+          <div className="demo--meter demo--meter-nobg demo--meter-small">
             <DiskMeter value={rand2} size={120} />
           </div>
-          <div className="meters-meterwrap meters-nobg meters-small">
+          <div className="demo--meter demo--meter-nobg demo--meter-small">
             <HalfCircleMeter value={rand3} size={120} />
           </div>
-          <div className="meters-meterwrap meters-nobg meters-small">
+          <div className="demo--meter demo--meter-nobg demo--meter-small">
             <LineMeter value={rand4} size={120} />
           </div>
-          <div className="meters-meterwrap meters-nobg meters-small">
+          <div className="demo--meter demo--meter-nobg demo--meter-small">
             <BlockMeter value={rand4} size={120} />
           </div>
         </div>
@@ -308,8 +305,8 @@ export default class Meters extends Component {
 
         {/* -------------------------------- */}
 
-        <div className="meters-row">
-          <div className="meters-meterwrap meters-small">
+        <div className="demo--row">
+          <div className="demo--meter demo--meter-small">
             <CircleMeter
               value={rand1}
               size={120}
@@ -317,7 +314,7 @@ export default class Meters extends Component {
               backgroundColor={styles.color.background}
             />
           </div>
-          <div className="meters-meterwrap meters-small">
+          <div className="demo--meter demo--meter-small">
             <DiskMeter
               value={rand2}
               size={120}
@@ -326,7 +323,7 @@ export default class Meters extends Component {
               textColor={styles.color.foreground}
             />
           </div>
-          <div className="meters-meterwrap meters-small">
+          <div className="demo--meter demo--meter-small">
             <HalfCircleMeter
               value={rand3}
               size={120}
@@ -334,7 +331,7 @@ export default class Meters extends Component {
               backgroundColor={styles.color.background}
             />
           </div>
-          <div className="meters-meterwrap meters-small">
+          <div className="demo--meter demo--meter-small">
             <LineMeter
               value={rand4}
               size={120}
@@ -342,7 +339,7 @@ export default class Meters extends Component {
               backgroundColor={styles.color.background}
             />
           </div>
-          <div className="meters-meterwrap meters-small">
+          <div className="demo--meter demo--meter-small">
             <BlockMeter
               value={rand4}
               size={120}

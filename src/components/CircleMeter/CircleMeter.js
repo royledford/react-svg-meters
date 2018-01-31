@@ -2,7 +2,13 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 /**
- * Circular style meter
+ * Displays a circular style meter. Circle meters can be displayed as a full or
+ * partial circle.
+ *
+ * The start position for the completed portion of the meter can be changed using
+ * progressStart property.
+ *
+ * You can also a display partial circle using the meterLength and progressStart properties..
  */
 export default class CircleMeter extends Component {
   static propTypes = {
